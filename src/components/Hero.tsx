@@ -3,11 +3,25 @@ import Wrapper from "../ui/Wrapper"
 
 export default function Hero() {
   return (
-    <Wrapper> 
+    <section className="h-40">
+      <div className="w-full h-full" style={{ 
+        backgroundImage: "url(./images/fairyBg.png)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center"
+        }}>
+        
+      </div>
+
+    </section>
+  )
+}
+
+/**
+     <Wrapper> 
       <section className="relative">  
         <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Hi, I am Aiste</h1>
         <img src={fairyBackground} alt="gradient background" />
       </section>
     </Wrapper>
-  )
-}
+ */
