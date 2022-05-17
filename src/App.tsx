@@ -1,9 +1,19 @@
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+
 function App() {
   return (
     <>
-      <h1 className="text-violet-900">Hi there</h1>
-      <div className="w-20 h-20 bg-blue-500 mx-auto my-6"></div>
-      <p>Laba diena</p>
+      <Navbar/>
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Footer />
     </>
   );
 }
