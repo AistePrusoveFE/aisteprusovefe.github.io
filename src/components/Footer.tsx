@@ -1,5 +1,9 @@
+import Wrapper from "../ui/Wrapper";
+
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <Wrapper>
+      <div>Footer</div>
+    </Wrapper>
   )
 }

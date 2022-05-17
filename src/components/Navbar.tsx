@@ -1,5 +1,11 @@
+import Wrapper from "../ui/Wrapper";
+
 export default function Navbar() {
   return (
-    <div>Navbar</div>
+    <Wrapper>
+      <div>
+        Navbar
+      </div>
+  </Wrapper>
   )
 }

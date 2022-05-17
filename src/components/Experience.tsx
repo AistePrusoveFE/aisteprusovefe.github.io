@@ -1,5 +1,9 @@
+import Wrapper from "../ui/Wrapper";
+
 export default function Experience() {
   return (
-    <div>Experience</div>
+    <Wrapper>
+      <div>Experience</div>
+    </Wrapper>
   )
 }

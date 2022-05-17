@@ -1,5 +1,9 @@
+import Wrapper from "../ui/Wrapper";
+
 export default function Projects() {
   return (
-    <div>Projects</div>
+    <Wrapper>
+      <div>Projects</div>
+    </Wrapper>
   )
 }

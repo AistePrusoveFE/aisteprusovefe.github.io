@@ -1,5 +1,11 @@
+import Wrapper from "../ui/Wrapper";
+
 export default function About() {
   return (
-    <div>About</div>
+    <Wrapper>
+      <div>
+        About
+      </div>
+    </Wrapper>
   )
 }
