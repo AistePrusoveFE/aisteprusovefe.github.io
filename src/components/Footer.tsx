@@ -1,9 +1,6 @@
-import Wrapper from "../ui/Wrapper";
 
 export default function Footer() {
   return (
-    <Wrapper>
-      <div>Footer</div>
-    </Wrapper>
+      <div id="contact" className="bg-black text-pink-300 p-4 h-20 font-mono">Contact me: aiste.frontend@gmail.com</div>
   )
 }
