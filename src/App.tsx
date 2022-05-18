@@ -1,5 +1,4 @@
 import About from "./components/About";
-import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -11,9 +10,8 @@ function App() {
       <div className="bg-red-50 min-h-screen p-2">
         <Navbar/>
         <Hero />
-        <About />
         <Projects />
-        <Experience />
+        <About />
         <Footer />
       </div>
     </div>
