@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+// hook from https://fireship.io/snippets/use-media-query-hook/
 
 export default function useMediaQuery(query: string) {
     const [matches, setMatches] = useState(false)
