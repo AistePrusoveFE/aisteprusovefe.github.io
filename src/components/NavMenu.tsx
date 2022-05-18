@@ -18,7 +18,7 @@ export default function NavMenu() {
                 { !showMenu && <RiMenu5Fill className="text-2xl" /> }
             </div>
             <motion.div 
-                initial={{ y: !showMenu ? "-100%" : 0 }}
+                initial={{ y: !showMenu ? "-150%" : 0 }}
                 animate={{ y: showMenu ? 0 : "-100%" }}
                 transition={{ duration: 0.6 }}
                 className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
