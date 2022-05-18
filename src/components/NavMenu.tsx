@@ -19,7 +19,7 @@ export default function NavMenu() {
             </div>
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}
-                animate={{ y: showMenu ? 0 : "-100%" }}
+                animate={{ y: showMenu ? 0 : "-150%" }}
                 transition={{ duration: 0.6 }}
                 className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
                 <Menu />
