@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.456ef50d.css",
-    "main.js": "/static/js/main.88d6f7e7.js",
-    "static/media/fairyBg2.png": "/static/media/fairyBg2.f19934a3488eea4ff909.png",
+    "main.css": "/static/css/main.3c4874a3.css",
+    "main.js": "/static/js/main.ecc367dc.js",
+    "static/media/ap_logo_2.png": "/static/media/ap_logo_2.8568857ec5ed217d8491.png",
     "index.html": "/index.html",
-    "main.456ef50d.css.map": "/static/css/main.456ef50d.css.map",
-    "main.88d6f7e7.js.map": "/static/js/main.88d6f7e7.js.map"
+    "main.3c4874a3.css.map": "/static/css/main.3c4874a3.css.map",
+    "main.ecc367dc.js.map": "/static/js/main.ecc367dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.456ef50d.css",
-    "static/js/main.88d6f7e7.js"
+    "static/css/main.3c4874a3.css",
+    "static/js/main.ecc367dc.js"
   ]
 }
