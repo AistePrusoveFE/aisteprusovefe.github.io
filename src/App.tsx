@@ -7,8 +7,8 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="bg-gradient-to-r from-pink-200 to-pink-300 h-screen p-2">
-      <div className="bg-red-50 h-screen">
+    <div className="bg-gradient-to-r from-pink-200 to-pink-300 min-h-screen p-2">
+      <div className="bg-red-50 min-h-screen p-2">
         <Navbar/>
         <Hero />
         <About />
