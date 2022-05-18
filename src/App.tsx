@@ -7,14 +7,16 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Footer />
-    </>
+    <div className="bg-gradient-to-r from-pink-200 to-pink-300 h-screen p-2">
+      <div className="bg-red-50 h-screen">
+        <Navbar/>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
