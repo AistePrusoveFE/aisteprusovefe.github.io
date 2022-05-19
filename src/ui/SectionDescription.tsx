@@ -1,6 +1,6 @@
 const SectionDescription = () => {
     return (
-        <div>Section Description</div>
+        <div className="description">Section Description</div>
     )
 }
 

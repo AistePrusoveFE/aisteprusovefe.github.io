@@ -1,6 +1,6 @@
 const SectionTitle = () => {
     return (
-        <div>Section Title</div>
+        <div className="title">Section Title</div>
     )
 }
 
