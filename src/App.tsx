@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import About from "./components/About";
+import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/navbar/Navbar";
@@ -7,7 +8,7 @@ import Projects from "./components/Projects";
 
 const App = () => {
     return (
-        <div className="bg-gradient-to-r from-pink-200 to-pink-300 min-h-screen p-2">
+        <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">
             <motion.div 
                 className="bg-red-50 min-h-screen"
                 initial={{ opacity: 0 }}
@@ -18,6 +19,7 @@ const App = () => {
                 <Hero />
                 <Projects />
                 <About />
+                <Blog />
                 <Footer />
             </motion.div>
         </div>
