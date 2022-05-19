@@ -1,11 +1,13 @@
+import { CloseMenu } from "./Menu"
 import Navlink from "./Navlink"
 
-const MenuNavlinks = () => {
+
+const MenuNavlinks = ({ onClick }: CloseMenu) => {
     return (
         <>
-            <Navlink linkId="works" text="works" />
-            <Navlink linkId="about" text="about" />
-            <Navlink linkId="contact" text="contact" />
+            <Navlink linkId="works" text="works" onClick={onClick} />
+            <Navlink linkId="about" text="about" onClick={onClick}/>
+            <Navlink linkId="contact" text="contact" onClick={onClick}/>
         </>
     )
 

@@ -2,7 +2,7 @@ import { RiMenu5Fill, RiCloseFill } from "react-icons/ri"
 import { useState } from "react"
 import useMediaQuery from "../../hooks/useMediaQuery"
 import { motion } from "framer-motion"
-import Menu from "../Menu"
+import Menu from "./Menu"
 
 const NavMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -10,6 +10,10 @@ const NavMenu = () => {
   
     const showMenuHandler = () => {
       setShowMenu(!showMenu)
+    }
+
+    const onCloseMenuHandler = () => {
+        setShowMenu(false)
     }
 
     return (
@@ -21,11 +25,11 @@ const NavMenu = () => {
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}
                 animate={{ y: showMenu ? 0 : "-150%" }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.3 }}
                 className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
-                <Menu />
+                <Menu onClick={onCloseMenuHandler} />
             </motion.div>
-            {isMedium && <Menu />}
+            {isMedium && <Menu onClick={onCloseMenuHandler}  />}
         </div>
     )
 }
