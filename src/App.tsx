@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -7,13 +8,18 @@ import Projects from "./components/Projects";
 const App = () => {
     return (
         <div className="bg-gradient-to-r from-pink-200 to-pink-300 min-h-screen p-2">
-            <div className="bg-red-50 min-h-screen ">
+            <motion.div 
+                className="bg-red-50 min-h-screen"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
                 <Navbar />
                 <Hero />
                 <Projects />
                 <About />
                 <Footer />
-            </div>
+            </motion.div>
         </div>
     );
 }

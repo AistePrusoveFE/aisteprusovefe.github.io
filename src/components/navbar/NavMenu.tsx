@@ -12,7 +12,7 @@ const NavMenu = () => {
       setShowMenu(!showMenu)
     }
 
-    const onCloseMenuHandler = () => {
+    const closeMenuHandler = () => {
         setShowMenu(false)
     }
 
@@ -27,9 +27,9 @@ const NavMenu = () => {
                 animate={{ y: showMenu ? 0 : "-150%" }}
                 transition={{ duration: 0.3 }}
                 className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
-                <Menu onClick={onCloseMenuHandler} />
+                <Menu onClick={closeMenuHandler} />
             </motion.div>
-            {isMedium && <Menu onClick={onCloseMenuHandler}  />}
+            {isMedium && <Menu onClick={closeMenuHandler}  />}
         </div>
     )
 }
