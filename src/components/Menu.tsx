@@ -1,5 +1,5 @@
 import useMediaQuery from "../hooks/useMediaQuery"
-import MenuNavlinks from "./MenuNavlinks"
+import MenuNavlinks from "./navbar/MenuNavlinks"
 
 const Menu = () => {
     const isMedium = useMediaQuery('(min-width: 768px)')
