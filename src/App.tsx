@@ -10,7 +10,7 @@ const App = () => {
     return (
         <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">
             <motion.div 
-                className="bg-red-50 min-h-screen"
+                className="bg-red-50 min-h-screen font-mono"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
