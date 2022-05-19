@@ -5,7 +5,7 @@ const Navbar = () => {
 
     return (
         <div className="pt-4 pb-8">
-            <nav className="h-16 py-2 px-4 flex justify-between items-center">
+            <nav className="h-16 py-1 px-4 flex justify-between items-center">
                 <img src={logo} alt="AwesomePerky logo image" className="h-full" />
                 <NavMenu />
             </nav>

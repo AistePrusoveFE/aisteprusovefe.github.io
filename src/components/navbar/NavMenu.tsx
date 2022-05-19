@@ -6,7 +6,7 @@ import Menu from "./Menu"
 
 const NavMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
-    const isMedium = useMediaQuery('(min-width: 768px)')
+    const isMedium = useMediaQuery('(min-width: 769px)')
   
     const showMenuHandler = () => {
       setShowMenu(!showMenu)
@@ -18,9 +18,9 @@ const NavMenu = () => {
 
     return (
         <div className={`${showMenu ? 'fixed top-9 right-6' : ''}`}>
-            <div className={isMedium ? 'hidden' : 'cursor-pointer p-2 bg-red-100 hover:bg-red-200 rounded-full relative z-20'} onClick={showMenuHandler}>
-                { showMenu && <RiCloseFill className="text-2xl text-white"/> }
-                { !showMenu && <RiMenu5Fill className="text-2xl" /> }
+            <div className={isMedium ? 'hidden' : 'cursor-pointer p-2 bg-red-100 hover:bg-red-200 rounded-full relative z-20 text-3xl'} onClick={showMenuHandler}>
+                { showMenu && <RiCloseFill className="text-white"/> }
+                { !showMenu && <RiMenu5Fill /> }
             </div>
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}
