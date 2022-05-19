@@ -1,7 +1,6 @@
 import Wrapper from "../ui/Wrapper";
 import avatar from "../assets/img/avatar.png"
 import useMediaQuery from "../hooks/useMediaQuery";
-import { useEffect, useState } from "react";
 
 const Hero = () => {
     // auto-typing reference https://lo-victoria.com/making-typing-animation-with-react-hooks
