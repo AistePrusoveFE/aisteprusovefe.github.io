@@ -1,5 +1,5 @@
 import Wrapper from "../ui/Wrapper";
-import avatar from "../assets/img/avatar.png"
+import avatar from "../assets/img/portrait.png"
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const Hero = () => {

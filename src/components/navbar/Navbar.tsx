@@ -1,4 +1,4 @@
-import logo from "../../assets/img/ap-logo-black.svg"
+import logo from "../../assets/img/ap-logo-black.png"
 import NavMenu from "./NavMenu"
 
 const Navbar = () => {
