@@ -4,13 +4,14 @@ import useMediaQuery from "../hooks/useMediaQuery"
 import { motion } from "framer-motion"
 import Menu from "./Menu"
 
-export default function NavMenu() {
+const NavMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
     const isMedium = useMediaQuery('(min-width: 768px)')
   
     const showMenuHandler = () => {
       setShowMenu(!showMenu)
     }
+
     return (
         <>
             <div className={isMedium ? 'hidden' : 'cursor-pointer p-2 hover:bg-red-200 rounded-full relative z-20'} onClick={showMenuHandler}>
@@ -18,7 +19,7 @@ export default function NavMenu() {
                 { !showMenu && <RiMenu5Fill className="text-2xl" /> }
             </div>
             <motion.div 
-                initial={{ y: !showMenu ? "-150%" : 0 }}
+                // initial={{ y: !showMenu ? "-150%" : 0 }}
                 animate={{ y: showMenu ? 0 : "-150%" }}
                 transition={{ duration: 0.6 }}
                 className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
@@ -28,3 +29,5 @@ export default function NavMenu() {
         </>
     )
 }
+
+export default NavMenu

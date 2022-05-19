@@ -1,24 +1,23 @@
 import useMediaQuery from "../hooks/useMediaQuery"
+import MenuNavlinks from "./MenuNavlinks"
 
-export default function Menu() {
+const Menu = () => {
     const isMedium = useMediaQuery('(min-width: 768px)')
 
-    if (isMedium){
+    if (isMedium) {
         return (
-            <div className="font-mono text-black p-4 gap-x-8 flex">
-                <a href="#works">works</a>
-                <a href="#about">about</a>
-                <a href="#contact">contact</a>
+            <div className="font-mono text-black py-4 pl-4 gap-x-8 flex">
+                <MenuNavlinks />
             </div>
-      )
+        )
     }
 
     return (
         <div className="font-mono text-white flex flex-col p-4 items-center pt-60 text-2xl gap-y-8 bg-black opacity-90 h-screen">
-            <a href="#works">works</a>
-            <a href="#about">about</a>
-            <a href="#contact">contact</a>
+            <MenuNavlinks />
         </div>
     )
-    
+
 }
+
+export default Menu
