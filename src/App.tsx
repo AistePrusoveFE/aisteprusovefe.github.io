@@ -17,9 +17,9 @@ const App = () => {
             >
                 <Navbar />
                 <div className="max-w-[550px] md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
-                    <Hero />
-                    <Projects />
+                    <Hero /> 
                     <About />
+                    <Projects />
                     <Blog />
                     <Footer />
                 </div>

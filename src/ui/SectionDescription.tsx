@@ -1,6 +1,10 @@
-const SectionDescription = () => {
+interface SectionDescriptionProps {
+    text: string
+}
+
+const SectionDescription = ({ text }: SectionDescriptionProps) => {
     return (
-        <div className="description">Section Description</div>
+        <div className="">{text}</div>
     )
 }
 

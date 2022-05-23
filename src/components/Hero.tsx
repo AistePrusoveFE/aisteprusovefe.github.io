@@ -8,13 +8,14 @@ const Hero = () => {
 
     return (
         <Wrapper>
-            <div className={`${isMedium ? 'grid grid-cols-5 grid-rows-2 my-20' : 'text-center'}`}>
-                <h1 className="font-medium text-2xl apolline col-span-3 self-end">Hello there! I am - <span className="text-4xl block title mt-2"> Aiste Prusove</span></h1>
-                <div className={`${isSmall ? 'max-w-[500px] mx-auto' : ''} col-span-2 row-span-2 text-center`}>
+            <div className={`${isMedium ? 'grid grid-cols-7 grid-rows-3 my-20' : 'text-center'}`}>
+                <h1 className="font-medium text-3xl md:text-5xl lg:text-6xl apolline col-span-4 self-end">Hello there!</h1>
+                <div className={`${isMedium ? 'max-w-[500px] mx-auto' : ''} col-span-3 row-span-3 self-center text-center`}>
                     <img src={avatar} alt="flat illustration portrait of Aiste Prusove" />
                 </div>
-                <div className="col-span-3">
-                    <p className="apolline text-lg font-medium pt-4">awesome &amp; perky developer</p>
+                <span className="text-4xl md:text-5xl lg:text-6xl block title mt-2 col-span-4 self-center">I am Aiste Prusove</span>
+                <div className="col-span-4">
+                    <p className="apolline text-2xl md:text-3xl font-medium">awesome &amp; perky developer</p>
                 </div>
             </div>
         </Wrapper>
