@@ -1,26 +1,20 @@
 import useMediaQuery from "../../hooks/useMediaQuery"
-import MenuNavlinks from "./MenuNavlinks"
+import AllNavlinks from "./AllNavlinks"
 
 export interface CloseMenu {
     onClick: () => void
+    className?: string
 }
 
 const Menu = ({ onClick }: CloseMenu) => {
-    const isMedium = useMediaQuery('(min-width: 768px)')
+    const isMedium = useMediaQuery('(min-width: 769px)')
 
     if (isMedium) {
-        return (
-            <div className="text-black py-4 pl-4 gap-x-8 flex">
-                <MenuNavlinks onClick={onClick} />
-            </div>
-        )
+        return <AllNavlinks onClick={onClick} className="text-black py-4 pl-4 gap-x-8 flex items-center"/>
+
     }
 
-    return (
-        <div className="text-white flex flex-col p-4 items-center pt-60 text-2xl gap-y-8 bg-black opacity-90 h-screen">
-            <MenuNavlinks onClick={onClick}/>
-        </div>
-    )
+    return <AllNavlinks onClick={onClick} className="text-white flex flex-col p-4 items-center pt-60 text-2xl gap-y-8 bg-black opacity-90 h-screen"/>
 
 }
 

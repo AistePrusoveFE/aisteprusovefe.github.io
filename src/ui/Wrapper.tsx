@@ -8,7 +8,7 @@ interface WrapperInterface {
 const Wrapper = ({ children, className }: WrapperInterface) => {
     const isMedium = useMediaQuery('(min-width: 768px)');
     return (
-        <div className={`${className} ${isMedium ? 'h-screen' : ''} p-2 m-2 text-center`}>
+        <div className={`${className} ${isMedium ? 'min-h-screen' : ''} p-2 m-2 text-center`}>
             {children}
         </div>
     )
