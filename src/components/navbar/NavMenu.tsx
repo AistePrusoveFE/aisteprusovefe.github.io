@@ -29,7 +29,7 @@ const NavMenu = () => {
                 className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
                 <Menu onClick={closeMenuHandler} />
             </motion.div>
-            {isMedium && <Menu onClick={closeMenuHandler}  />}
+            { isMedium && <Menu onClick={closeMenuHandler} /> }
         </div>
     )
 }
