@@ -11,7 +11,7 @@ interface NavlinkProps {
 const SingleNavlink = ({ text, linkId, onClick }: NavlinkProps) => {
     const isMedium = useMediaQuery('(min-width: 769px')
     return (
-        <a href={`#${linkId}`} onClick={onClick} className={`fenwick-outline`}>{text}</a>
+        <a href={`#${linkId}`} onClick={onClick} className={`${isMedium ? 'interstate' : 'fenwick-outline'}`}>{text}</a>
     )
 }
 
