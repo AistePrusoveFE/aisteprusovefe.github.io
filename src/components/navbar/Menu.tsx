@@ -10,7 +10,7 @@ const Menu = ({ onClick }: CloseMenu) => {
     const isMedium = useMediaQuery('(min-width: 769px)')
 
     if (isMedium) {
-        return <AllNavlinks onClick={onClick} className="text-black py-4 pl-4 gap-x-8 flex items-center"/>
+        return <AllNavlinks onClick={onClick} className="text-black py-4 pl-4 gap-x-4 flex items-center"/>
 
     }
 

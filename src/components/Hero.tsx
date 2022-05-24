@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className={`max-w-[500px] mx-auto`}>
                     <img src={avatar} alt="flat illustration portrait of Aiste Prusove" className="p-4" />
                 </div>
-                <p className="text-5xl mb-4 font-bold fenwick">Aiste Prusove</p>
+                <p className="text-5xl mb-4 font-bold">Aiste Prusove</p>
                 <p className="text-2xl">&lt;code&gt; &amp;&amp; &#10000;design&#9998;</p>
             </div>
         </Wrapper>

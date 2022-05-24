@@ -5,10 +5,6 @@
 @import url("https://use.typekit.net/wee5yer.css");
 
 @layer components {
-    .fenwick {
-        font-family: fenwick, sans-serif;
-    }
-
     .fenwick-outline {
         font-family: fenwick-outline, sans-serif;
     }
