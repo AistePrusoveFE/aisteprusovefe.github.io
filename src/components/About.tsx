@@ -1,13 +1,23 @@
-import SectionDescription from "../ui/SectionDescription";
+import data from "../content";
 import SectionTitle from "../ui/SectionTitle";
 import Wrapper from "../ui/Wrapper";
+import Question from "./Question";
 
 const About = () => {
+    const questions = data.about
+
     return (
         <Wrapper>
             <div id="about" className="">
                 <SectionTitle text="Nice to meet you!" />
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quo nulla sequi amet tenetur doloremque minima, nisi facere fugiat id accusantium illo magnam perferendis, vero ipsam alias saepe nostrum officia ut itaque unde accusamus! Enim corrupti non recusandae suscipit minima. A esse asperiores hic alias odit, iste ab, omnis fugiat voluptate aut fugit sed eaque natus nostrum, voluptatem accusamus repellendus et incidunt numquam recusandae! Sapiente, distinctio iure eum minus ea ducimus quas eaque ut. A voluptates perspiciatis minus ullam, necessitatibus inventore iusto numquam nesciunt adipisci ad accusantium reiciendis cupiditate consequuntur minima qui itaque alias culpa iste assumenda aperiam aliquid blanditiis.</p>
+                <h2 className="font-bold">FAQ about me</h2>
+                <div>
+                    { questions.map((question, index) => {
+                        return (
+                            <Question key={index} {...question}/>
+                        )
+                    }) }
+                </div>
             </div>
         </Wrapper>
     )

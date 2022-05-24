@@ -8,8 +8,8 @@ const AllNavlinks = ({ onClick, className }: CloseMenu) => {
     return (
         <div className={`${className}`}>
             <ToggleTheme />
-            <SingleNavlink linkId="works" text="works" onClick={onClick} />
             <SingleNavlink linkId="about" text="about" onClick={onClick} />
+            <SingleNavlink linkId="works" text="works" onClick={onClick} />
             <SingleNavlink linkId="blog" text="articles" onClick={onClick} />
             <a href="https://www.instagram.com/awesome_perky_tech.diaries/" 
                target="_blank" 
