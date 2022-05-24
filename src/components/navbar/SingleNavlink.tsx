@@ -1,6 +1,3 @@
-import useMediaQuery from "../../hooks/useMediaQuery"
-
-
 
 interface NavlinkProps {
     text: string
@@ -9,9 +6,9 @@ interface NavlinkProps {
 }
 
 const SingleNavlink = ({ text, linkId, onClick }: NavlinkProps) => {
-    const isMedium = useMediaQuery('(min-width: 769px')
+
     return (
-        <a href={`#${linkId}`} onClick={onClick} className={`${isMedium ? 'interstate' : 'apolline'}`}>{text}</a>
+        <a href={`#${linkId}`} onClick={onClick}>{text}</a>
     )
 }
 

@@ -7,7 +7,7 @@ export interface CloseMenu {
 }
 
 const Menu = ({ onClick }: CloseMenu) => {
-    const isMedium = useMediaQuery('(min-width: 769px)')
+    const isMedium = useMediaQuery('(min-width: 768px)')
 
     if (isMedium) {
         return <AllNavlinks onClick={onClick} className="text-black py-4 pl-4 gap-x-4 flex items-center"/>

@@ -1,19 +1,18 @@
 import Wrapper from "../ui/Wrapper";
 import avatar from "../assets/img/portrait.png"
-import useMediaQuery from "../hooks/useMediaQuery";
 
 const Hero = () => {
-    const isSmall = useMediaQuery('(min-width: 550px)')
-    const isMedium = useMediaQuery('(min-width: 769px)')
 
     return (
         <Wrapper>
-            <div className={`text-center`}>
-                <div className={`max-w-[500px] mx-auto`}>
-                    <img src={avatar} alt="flat illustration portrait of Aiste Prusove" className="p-4" />
+            <div className={`text-center md:grid md:grid-cols-7 md:grid-rows-3 items-center`}>
+                <div className={`max-w-[500px] mx-auto mb-6 md:mb-0 col-start-5 col-span-3 row-span-3`}>
+                    <img src={avatar} alt="flat illustration portrait of Aiste Prusove" className="md:p-2" />
                 </div>
-                <p className="text-5xl mb-4 font-bold">Aiste Prusove</p>
-                <p className="text-2xl">&lt;code&gt; &amp;&amp; &#10000;design&#9998;</p>
+                <div className="col-start-1 col-span-4 row-start-1 row-span-3 md:text-left">
+                    <p className="text-5xl mb-4 font-bold md:text-6xl lg:text-7xl xl:text-8xl ">Aiste Prusove</p>
+                    <p className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl">&lt;code&gt; &amp;&amp; &#10000;design&#9998;</p>
+                </div>
             </div>
         </Wrapper>
     )

@@ -6,7 +6,7 @@ import Menu from "./Menu"
 
 const NavMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
-    const isMedium = useMediaQuery('(min-width: 769px)')
+    const isMedium = useMediaQuery('(min-width: 768px)')
   
     const showMenuHandler = () => {
       setShowMenu(!showMenu)
