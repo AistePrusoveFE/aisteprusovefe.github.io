@@ -19,8 +19,7 @@ const NavMenu = () => {
     return (
         <div className={`${showMenu ? 'fixed top-8 right-6' : ''}`}>
             <div className={isMedium ? 'hidden' : 'cursor-pointer p-2 bg-red-100 hover:bg-red-200 rounded-full relative z-20 text-3xl'} onClick={showMenuHandler}>
-                { showMenu && <RiCloseFill className="text-white"/> }
-                { !showMenu && <RiMenu5Fill /> }
+                { showMenu ? <RiCloseFill className="text-white"/> : <RiMenu5Fill /> }
             </div>
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}
