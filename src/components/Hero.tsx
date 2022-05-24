@@ -10,7 +10,7 @@ const Hero = () => {
                     <img src={avatar} alt="flat illustration portrait of Aiste Prusove" className="md:p-2" />
                 </div>
                 <div className="col-start-1 col-span-4 row-start-1 row-span-3 md:text-left">
-                    <p className="text-5xl mb-4 font-bold md:text-6xl lg:text-7xl xl:text-8xl ">Aiste Prusove</p>
+                    <p className="text-5xl mb-4 font-bold md:text-6xl lg:text-7xl xl:text-8xl">Aiste Prusove</p>
                     <p className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl">&lt;code&gt; &amp;&amp; &#10000;design&#9998;</p>
                 </div>
             </div>

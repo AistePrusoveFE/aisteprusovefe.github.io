@@ -10,12 +10,10 @@ const About = () => {
         <Wrapper>
             <div id="about" className="">
                 <SectionTitle text="Nice to meet you!" />
-                <h2 className="font-bold">FAQ about me</h2>
-                <div>
+                <h2 className="font-bold">First things first</h2>
+                <div className="">
                     { questions.map((question, index) => {
-                        return (
-                            <Question key={index} {...question}/>
-                        )
+                        return <Question key={index} {...question}/>
                     }) }
                 </div>
             </div>

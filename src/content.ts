@@ -10,7 +10,11 @@ interface DataList {
 const data: DataList = {
     about: [
         {
-            title: 'Who this?',
+            title: 'Aiste Prusove - Who this?',
+            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
+        },
+        {
+            title: 'My Vision & Mission',
             info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
         },
         {
@@ -23,10 +27,6 @@ const data: DataList = {
         },
         {
             title: 'Experience',
-            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
-        },
-        {
-            title: 'Vision & Mission',
             info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
         },
     ]

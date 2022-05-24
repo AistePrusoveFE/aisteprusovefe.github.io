@@ -5,12 +5,13 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import DividerHorizontal from "./ui/DividerHorizontal";
 
 const App = () => {
     return (
         <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">
             <motion.div 
-                className="bg-red-50"
+                className="bg-red-50 text-zinc-700"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}

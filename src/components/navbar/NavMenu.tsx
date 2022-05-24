@@ -3,6 +3,7 @@ import { useState } from "react"
 import useMediaQuery from "../../hooks/useMediaQuery"
 import { motion } from "framer-motion"
 import Menu from "./Menu"
+import BtnIcon from "../../ui/BtnIcon"
 
 const NavMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -18,9 +19,7 @@ const NavMenu = () => {
 
     return (
         <div className={`${showMenu ? 'fixed top-8 right-6' : ''}`}>
-            <div className={isMedium ? 'hidden' : 'cursor-pointer p-2 bg-red-100 hover:bg-red-200 rounded-full relative z-20 text-3xl'} onClick={showMenuHandler}>
-                { showMenu ? <RiCloseFill className="text-white"/> : <RiMenu5Fill /> }
-            </div>
+            <BtnIcon className={isMedium ? 'hidden' : 'relative z-20 text-3xl'} onClick={showMenuHandler} icon={ showMenu ? <RiCloseFill className="text-white"/> : <RiMenu5Fill /> } />
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}
                 animate={{ y: showMenu ? 0 : "-150%" }}

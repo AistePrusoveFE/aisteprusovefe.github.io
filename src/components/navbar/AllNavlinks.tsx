@@ -6,7 +6,7 @@ import SingleNavlink from "./SingleNavlink"
 const AllNavlinks = ({ onClick, className }: CloseMenu) => {
 
     return (
-        <div className={`${className}`}>
+        <div className={`${className ?? ''}`}>
             <ToggleTheme />
             <SingleNavlink linkId="about" text="about" onClick={onClick} />
             <SingleNavlink linkId="works" text="works" onClick={onClick} />
