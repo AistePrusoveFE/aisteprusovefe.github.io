@@ -8,7 +8,7 @@ const AllNavlinks = ({ onClick, className }: CloseMenu) => {
             <SingleNavlink linkId="works" text="works" onClick={onClick} />
             <SingleNavlink linkId="about" text="about" onClick={onClick}/>
             <SingleNavlink linkId="blog" text="articles" onClick={onClick}/>
-            <SingleNavlink linkId="contact" text="contact" onClick={onClick}/>
+            <a href="https://www.instagram.com/awesome_perky_tech.diaries/" target="_blank" className="fenwick text-pink-400">@awesome_perky_tech</a>
             <ToggleTheme />
         </div>
     )
