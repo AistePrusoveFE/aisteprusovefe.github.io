@@ -5,7 +5,7 @@ interface GridColumn {
 
 const GridCol = ({ content, size }: GridColumn) => {
     return (
-        <div className={`${size} border border-black p-2 text-center cursor-pointer`}>
+        <div className={`${size} shadow-md p-2 text-center cursor-pointer rounded-xl hover:shadow-xl`}>
             <p>{content}</p>
         </div>
     )

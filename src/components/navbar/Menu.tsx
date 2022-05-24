@@ -1,5 +1,5 @@
 import useMediaQuery from "../../hooks/useMediaQuery"
-import AllNavlinks from "./AllNavlinks"
+import AllNavlinks from "./AllLinks"
 
 export interface CloseMenu {
     onClick: () => void
