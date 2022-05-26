@@ -11,8 +11,8 @@ const About = () => {
         <Wrapper>
             <div id="about" className="">
                 <SectionTitle text="Let me introduce myself" />
-                <SectionSubtitle text="I am a junior frontend developer and web designer with a passion for illustrations, based in Vilnius"/>
-                <div className="lg:grid grid-cols-2 gap-x-4">
+                <SectionSubtitle text="I am a frontend web developer and web designer with a passion for custom illustrations"/>
+                <div className="">
                     { questions.map((question, index) => {
                         return <Question key={index} {...question}/>
                     }) }

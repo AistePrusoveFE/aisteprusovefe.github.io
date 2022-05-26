@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+// import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
 import { SingleQuestion } from '../content';
 import BtnIcon from '../ui/BtnIcon';
@@ -12,12 +12,12 @@ const Question = ({ title, info}: SingleQuestion) => {
     }
 
     return (
-        <div className="p-2 mb-4 rounded-xl shadow-md">
-            <div className="flex items-center gap-x-2 py-2">
-                <BtnIcon onClick={onShowInfoHandler} icon={showInfo ? <RiArrowUpSFill /> : <RiArrowDownSFill />} />
-                <h4 className="font-bold apolline">{title}</h4>
+        <div className="mb-4 shadow-md rounded-xl">
+            <div className={`${showInfo ? 'rounded-t-xl' : 'rounded-xl'} flex items-center bg-red-100 hover:bg-red-200 focus:bg-red-200 cursor-pointer py-2` } onClick={onShowInfoHandler}>
+                <BtnIcon icon={showInfo ? <RiArrowUpSFill /> : <RiArrowDownSFill />} />
+                <h4 className="font-bold apolline ">{title}</h4>
             </div>
-            { showInfo && <p className="pl-10 text-justify pr-4 pb-4">{info}</p> }
+            { showInfo && <p className="p-4 pl-8 text-justify bg-zinc-50 rounded-b-xl">{info}</p> }
         </div>
     )
 };
