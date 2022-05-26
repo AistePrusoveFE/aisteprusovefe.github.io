@@ -4,7 +4,7 @@ interface DividerProps {
 
 const DividerHorizontal = ({ className }: DividerProps) => {
 
-    return <div className={`${className ?? ''} bg-zinc-700 h-px`} />
+    return <div className={`${className ?? ''} h-px`} />
 }
 
 export default DividerHorizontal
