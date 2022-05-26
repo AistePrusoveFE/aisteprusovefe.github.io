@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.952cb0a1.css",
-    "main.js": "/static/js/main.7ef088a6.js",
+    "main.css": "/static/css/main.127ec366.css",
+    "main.js": "/static/js/main.44eef112.js",
     "static/media/portrait.png": "/static/media/portrait.938ff81f44488637ab5a.png",
-    "static/media/ap-logo-black.png": "/static/media/ap-logo-black.6e06eb29f4c313280d22.png",
+    "static/media/logo.png": "/static/media/logo.e6d80a9ed2d9484367c5.png",
     "index.html": "/index.html",
-    "main.952cb0a1.css.map": "/static/css/main.952cb0a1.css.map",
-    "main.7ef088a6.js.map": "/static/js/main.7ef088a6.js.map"
+    "main.127ec366.css.map": "/static/css/main.127ec366.css.map",
+    "main.44eef112.js.map": "/static/js/main.44eef112.js.map"
   },
   "entrypoints": [
-    "static/css/main.952cb0a1.css",
-    "static/js/main.7ef088a6.js"
+    "static/css/main.127ec366.css",
+    "static/js/main.44eef112.js"
   ]
 }
