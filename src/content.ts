@@ -1,6 +1,6 @@
 export interface SingleQuestionProps {
     title: string,
-    info: string
+    info: string | string[]
 }
 
 export interface SingleProjectProps {

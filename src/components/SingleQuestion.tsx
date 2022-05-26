@@ -13,9 +13,9 @@ const SingleQuestion = ({ title, info}: SingleQuestionProps) => {
 
     return (
         <div className="mb-4 shadow-md rounded-xl">
-            <div className={`${showInfo ? 'rounded-t-xl' : 'rounded-xl'} flex items-center bg-red-100 hover:bg-red-200 focus:bg-red-200 cursor-pointer py-2` } onClick={onShowInfoHandler}>
+            <div className={`${showInfo ? 'rounded-t-xl' : 'rounded-xl'} flex items-center bg-red-100 hover:bg-red-200 focus:bg-red-200 cursor-pointer py-2 lg:py-6` } onClick={onShowInfoHandler}>
                 <BtnIcon icon={showInfo ? <RiArrowUpSFill /> : <RiArrowDownSFill />} />
-                <h4 className="font-bold apolline ">{title}</h4>
+                <h4 className="font-bold apolline lg:text-lg">{title}</h4>
             </div>
             { showInfo && <p className="p-4 pl-8 text-justify bg-zinc-50 rounded-b-xl">{info}</p> }
         </div>
