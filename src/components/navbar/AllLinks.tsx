@@ -16,7 +16,7 @@ const AllLinks = ({ onClick, className }: CloseMenu) => {
             <SingleNavlink linkId="about" text="about" onClick={onClick} />
             <SingleNavlink linkId="works" text="works" onClick={onClick} />
             <SingleNavlink linkId="blog" text="articles" onClick={onClick} />
-            <BtnIcon onClick={openUrl} className="text-pink-400 text-lg" icon={<RiInstagramLine />}/>
+            <BtnIcon onClick={openUrl} className="text-pink-400 text-lg hover:text-pink-600" icon={<RiInstagramLine />}/>
         </div>
     )
 

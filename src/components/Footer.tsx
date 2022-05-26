@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div id="contact" className="bg-black text-pink-300 p-4 h-20 ">Contact me: test@test.com</div>
+        <div id="contact" className="text-pink-600 p-4 h-20 ">&copy; 2022</div>
     )
 }
 

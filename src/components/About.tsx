@@ -10,8 +10,8 @@ const About = () => {
     return (
         <Wrapper>
             <div id="about" className="">
-                <SectionTitle text="Nice to meet you!" />
-                <SectionSubtitle text="But, first things first:"/>
+                <SectionTitle text="Let me introduce myself" />
+                <SectionSubtitle text="I am a junior frontend developer and web designer with a passion for illustrations, based in Vilnius"/>
                 <div className="lg:grid grid-cols-2 gap-x-4">
                     { questions.map((question, index) => {
                         return <Question key={index} {...question}/>

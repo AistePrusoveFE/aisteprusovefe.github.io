@@ -6,7 +6,7 @@ const Blog = () => {
     return (
         <Wrapper>
             <h2 className="text-4xl font-bold apolline text-center">Recent Articles</h2>
-            <SectionSubtitle text=""/> 
+            <SectionSubtitle text="If you feel like reading.. "/> 
             <div id="blog" className="grid gap-y-4 md:grid-cols-2 md:gap-x-4">
                 <GridCol size="h-40" content="My Career Change" />
                 <GridCol size="h-40" content="Apps I like" />

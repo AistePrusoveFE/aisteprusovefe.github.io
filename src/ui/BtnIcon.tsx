@@ -9,7 +9,7 @@ interface BtnIconProps {
 
 const BtnIcon = ({ icon, className, onClick}: BtnIconProps) => {
     return (
-        <button onClick={onClick} className={`${className ?? ''} cursor-pointer p-2 bg-red-100 hover:bg-red-200 rounded-full`}>
+        <button onClick={onClick} className={`${className ?? ''} cursor-pointer p-2`}>
             { icon }
         </button>
     )
