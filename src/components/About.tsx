@@ -2,7 +2,7 @@ import data from "../content";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import SectionTitle from "../ui/SectionTitle";
 import Wrapper from "../ui/Wrapper";
-import Question from "./Question";
+import SingleQuestion from "./SingleQuestion";
 
 const About = () => {
     const questions = data.about
@@ -14,7 +14,7 @@ const About = () => {
                 <SectionSubtitle text="I am a frontend web developer and web designer with a passion for custom illustrations"/>
                 <div className="">
                     { questions.map((question, index) => {
-                        return <Question key={index} {...question}/>
+                        return <SingleQuestion key={index} {...question}/>
                     }) }
                 </div>
             </div>

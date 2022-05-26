@@ -1,10 +1,10 @@
 import { useState } from 'react';
 // import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
-import { SingleQuestion } from '../content';
+import { SingleQuestionProps } from '../content';
 import BtnIcon from '../ui/BtnIcon';
 
-const Question = ({ title, info}: SingleQuestion) => {
+const SingleQuestion = ({ title, info}: SingleQuestionProps) => {
     const [showInfo, setShowInfo] = useState(false)
 
     const onShowInfoHandler = () => {
@@ -22,4 +22,4 @@ const Question = ({ title, info}: SingleQuestion) => {
     )
 };
 
-export default Question;
+export default SingleQuestion;
