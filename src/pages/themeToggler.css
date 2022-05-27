@@ -16,9 +16,9 @@
     --form-bg: #191919;
 }
 
-a {
+/* a {
     color: var(--text-secondary)
-}
+} */
 
 .main {
     background-color: var(--background);
@@ -57,9 +57,9 @@ input[type=checkbox]:checked {
     padding: 0;
 }
 
-button {
+/* button {
     background-color: var(--accent);
     border: 1px solid var(--accent);
     color: #fff;
-}
+} */
 
