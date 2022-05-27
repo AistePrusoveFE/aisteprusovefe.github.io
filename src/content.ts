@@ -1,4 +1,4 @@
-export interface SingleQuestionProps {
+export interface SingleFactProps {
     title: string,
     info: string | string[]
 }
@@ -11,7 +11,7 @@ export interface SingleProjectProps {
 export interface SingleArticleProps extends SingleProjectProps {}
 
 interface DataList {
-    about: SingleQuestionProps[],
+    about: SingleFactProps[],
     projects: SingleProjectProps[],
     articles: SingleArticleProps[]
 }
@@ -20,7 +20,7 @@ const data: DataList = {
     about: [
         {
             title: 'Aiste Prusove - Who this?',
-            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
+            info: ''
         },
         {
             title: 'My Vision & Mission',
@@ -28,11 +28,11 @@ const data: DataList = {
         },
         {
             title: 'Education',
-            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
+            info: ['CodeAcademy - Full Stack Developer']
         },
         {
             title: 'My personality',
-            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
+            info: ['Foodie', 'Loves Nature & Gardening', 'Empathetic', 'Ambivert', 'Positive']
         },
         {
             title: 'Experience',
