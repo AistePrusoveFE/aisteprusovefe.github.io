@@ -1,7 +1,7 @@
 
 const Placeholder = () => {
     return (
-        <div className="lg:mt-20 text-center">
+        <div className="my-8 text-center">
             <p className="animate-pulse">animation</p>
         </div>
     )

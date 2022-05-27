@@ -10,9 +10,9 @@ const About = () => {
     return (
         <Wrapper>
             <div id="about">
-                <SectionTitle text="Something about me" />
-                <SectionSubtitle text="Frontend web developer who loves web design, branding and has weird passion to make custom illustrations" />
-                <div className="mt-20">
+                <SectionTitle text="I am a Frontend Web Developer with a passion for UI &amp; Graphic Design" />
+                <SectionSubtitle text="Learn more about me" />
+                <div className="mt-4">
                     { questions.map((question, index) => {
                         return <SingleQuestion key={index} {...question}/>
                     }) }

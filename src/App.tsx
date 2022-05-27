@@ -17,9 +17,8 @@ const App = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-
                 <div className="max-w-[550px] md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
-                    <div className="mb-10 lg:mb-40">
+                    <div className="">
                         <Navbar />
                         <Hero />
                         <Placeholder/>
