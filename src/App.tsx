@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import DividerHorizontal from "./ui/DividerHorizontal";
+import Placeholder from "./ui/Placeholder";
 
 const App = () => {
     return (
@@ -18,9 +19,10 @@ const App = () => {
             >
 
                 <div className="max-w-[550px] md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
-                    <div className="h-screen lg:h-auto mb-20 lg:mb-40">
+                    <div className="mb-10 lg:mb-40">
                         <Navbar />
                         <Hero />
+                        <Placeholder/>
                     </div>
                     <About />
                     <Projects />

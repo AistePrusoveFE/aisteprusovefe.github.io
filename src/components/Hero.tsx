@@ -5,7 +5,7 @@ const Hero = () => {
 
     return (
         <Wrapper>
-            <div className="text-center lg:grid lg:grid-cols-7 lg:grid-rows-3 items-center">
+            <div className="text-center lg:grid lg:grid-cols-7 lg:grid-rows-3 items-center md:mt-20 lg:mt-40">
                 <div className="max-w-[500px] mx-auto mb-8 col-start-5 col-span-3 row-span-3 lg:mx-0 justify-self-end">
                     <img src={avatar} alt="flat illustration portrait of Aiste Prusove" className="px-2 md:px-0" />
                 </div>
