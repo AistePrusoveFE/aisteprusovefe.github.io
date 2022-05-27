@@ -8,7 +8,7 @@ export interface SingleProjectProps {
     content: string
 }
 
-export interface SingleArticleProps extends SingleProjectProps {}
+export interface SingleArticleProps extends SingleProjectProps { }
 
 interface DataList {
     about: SingleFactProps[],
@@ -20,15 +20,15 @@ const data: DataList = {
     about: [
         {
             title: 'Aiste Prusove - Who this?',
-            info: ''
+            info: 'Since teenager years I was into multimedia, but somehow turned different direction and was working jobs like - administrator, receptionist or consultant. However I always felt my inner artist knocking and really desired creative work. In 2020 I finally decided to change my career and stepped in IT industry. Learned programming, practiced design & illustration skills, and here we are - in my developed page. 😎'
         },
         {
             title: 'My Vision & Mission',
-            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
+            info: 'I am to help people or companies in developing their product and ofc share it with the world. I am trying to keep my code clean, elegant and efficient. So as my design.'
         },
         {
             title: 'Education',
-            info: ['CodeAcademy - Full Stack Developer']
+            info: ['CodeAcademy - Full Stack Developer (HTML, CSS, SCSS, Javascript, PHP)', 'Self Taught - Typescript, React.js, Next.js, Node.js']
         },
         {
             title: 'My personality',
@@ -36,7 +36,7 @@ const data: DataList = {
         },
         {
             title: 'Experience',
-            info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde alias autem laboriosam tempora eum? Asperiores molestias temporibus incidunt nemo sit?'
+            info: ['CodeAcademy: PHP Consutant/Mentor & Front End Web Development Lecturer 2020 Oct - 2021 Oct', 'Freelance: Web Developer & Web Designer 2021 Oct - Present']
         },
     ],
     projects: [
