@@ -1,55 +1,54 @@
-import React, { useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 const getInitialTheme = () => {
-    if (typeof window !== 'undefined' && window.localStorage){
-        const storedPrefs = window.localStorage.getItem('current-theme')
+    if (typeof window !== 'undefined' && window.localStorage) {
+        const storedPrefs = window.localStorage.getItem('color-theme')
 
-        if (typeof storedPrefs === 'string') return storedPrefs
+        if (typeof storedPrefs === 'string'){
+            return storedPrefs
+        }
 
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+        const userMedia = window.matchMedia('(prefers-color-scheme): dark')
+
+        if (userMedia.matches){
             return 'dark'
         }
     }
 
-    return 'light'
+    return 'ligh'
 }
 
-// default theme value???
-export const ThemeContext = React.createContext({
-    theme: 'light',
-    setTheme: (string: string) => {}
-})
-
+export const ThemeContext = createContext({theme: '', setTheme: (s:string) => { }})
 
 interface ThemeProviderProps {
-    initialTheme: any
+    initialTheme: string
     children: JSX.Element | JSX.Element[]
 }
 
 export const ThemeProvider = ({ initialTheme, children }: ThemeProviderProps) => {
     const [theme, setTheme] = useState(getInitialTheme)
 
-    const checkTheme = (existing: string) => {
+    const rawSetTheme = (rawTheme: string) => {
         const root = window.document.documentElement
-        const isDark = existing === 'dark'
+        const isDark = rawTheme === 'dark'
 
         root.classList.remove(isDark ? 'light' : 'dark')
-        root.classList.add(existing)
+        root.classList.add(rawTheme)
 
-        localStorage.setItem('current-theme', existing)
+        localStorage.setItem('color-theme', rawTheme)
     }
 
     if (initialTheme){
-        checkTheme(initialTheme)
+        rawSetTheme(initialTheme)
     }
 
     useEffect(() => {
-        checkTheme(theme)
+        rawSetTheme(theme)
     }, [theme])
 
     return (
-        <ThemeContext.Provider value={{ theme, setTheme }}>
-            { children }
+        <ThemeContext.Provider value={{theme, setTheme}}>
+            {children}
         </ThemeContext.Provider>
     )
 }

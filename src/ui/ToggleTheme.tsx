@@ -1,14 +1,15 @@
 import { useContext } from "react"
 import { ThemeContext } from "../context/theme-context"
 import BtnIcon from "./BtnIcon"
-import * as Icon from 'react-icons/bs'
+import { BsSun } from 'react-icons/bs'
+import { MdDarkMode } from 'react-icons/md'
 
 const ToggleTheme = () => {
     const {theme, setTheme} = useContext(ThemeContext)
 
     return (
         <div>
-            <BtnIcon icon={theme === 'dark' ? <Icon.BsSun /> : <Icon.BsFillSunFill />} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}/>
+            <BtnIcon icon={theme === 'dark' ? <BsSun /> : <MdDarkMode />} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}/>
         </div>
     )
 }
