@@ -11,10 +11,10 @@ const Home = () => {
     return (
         <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">
             <motion.div
-                className="bg-red-50 dark:bg-zinc-900 transition-all text-zinc-700"
+                className="bg-red-50 dark:bg-zinc-900 transition-colors text-zinc-700"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.5 }}
             >
                 <div className="max-w-[550px] md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
                     <div className="">

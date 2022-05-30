@@ -1,10 +1,10 @@
 import { createContext, useEffect, useState } from "react"
 
-const getInitialTheme = () => {
+const getInitialTheme = (): ThemeColor => {
     if (typeof window !== 'undefined' && window.localStorage) {
         const storedPrefs = window.localStorage.getItem('color-theme')
 
-        if (typeof storedPrefs === 'string'){
+        if (storedPrefs === 'dark' || storedPrefs === 'light'){
             return storedPrefs
         }
 
@@ -15,31 +15,30 @@ const getInitialTheme = () => {
         }
     }
 
-    return 'ligh'
+    return 'light'
 }
 
-export const ThemeContext = createContext({theme: '', setTheme: (s:string) => { }})
+export const ThemeContext = createContext<{theme: ThemeColor, setTheme: (s: ThemeColor) => void}>({
+    theme: getInitialTheme(), 
+    setTheme: (s: ThemeColor) => {}
+})
 
 interface ThemeProviderProps {
-    initialTheme: string
     children: JSX.Element | JSX.Element[]
 }
 
-export const ThemeProvider = ({ initialTheme, children }: ThemeProviderProps) => {
-    const [theme, setTheme] = useState(getInitialTheme)
+type ThemeColor = 'light' | 'dark'
 
-    const rawSetTheme = (rawTheme: string) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+    const [theme, setTheme] = useState<ThemeColor>(getInitialTheme)
+
+    const rawSetTheme = (rawTheme: ThemeColor) => {
         const root = window.document.documentElement
-        const isDark = rawTheme === 'dark'
 
-        root.classList.remove(isDark ? 'light' : 'dark')
+        root.classList.remove('light', 'dark')
         root.classList.add(rawTheme)
 
         localStorage.setItem('color-theme', rawTheme)
-    }
-
-    if (initialTheme){
-        rawSetTheme(initialTheme)
     }
 
     useEffect(() => {
