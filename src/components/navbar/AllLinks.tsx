@@ -1,7 +1,7 @@
 import { RiInstagramLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 import BtnIcon from "../../ui/BtnIcon"
-import ToggleTheme from "../ToggleTheme"
+import ToggleTheme from "../../ui/ToggleTheme"
 import { CloseMenu } from "./Menu"
 import SingleNavlink from "./SingleNavlink"
 

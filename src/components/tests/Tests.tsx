@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Switcher() {
+export default function Tests() {
     return (
         <div>Switcher</div>
     )
