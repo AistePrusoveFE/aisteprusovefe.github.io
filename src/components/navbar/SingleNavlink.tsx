@@ -8,7 +8,7 @@ interface NavlinkProps {
 const SingleNavlink = ({ text, linkId, onClick }: NavlinkProps) => {
 
     return (
-        <a href={`#${linkId}`} onClick={onClick}>{text}</a>
+        <a href={`#${linkId}`} onClick={onClick} className="apolline">{text}</a>
     )
 }
 

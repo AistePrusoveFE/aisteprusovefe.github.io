@@ -1,17 +1,22 @@
 @import url("https://use.typekit.net/wee5yer.css");
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Syne+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
+/*
     .fenwick-outline {
         font-family: fenwick-outline, sans-serif;
     }
-
+*/
     .apolline {
         font-family: apolline, serif;
+        font-family: 'Nova Mono', monospace;
+        font-family: 'Syne Mono', monospace;
     }
+
 }
 
 @layer base {
@@ -20,6 +25,7 @@
     }
 
     * {
-        font-family: interstate, sans-serif;
+        font-family: 'Syne Mono', monospace;
+        font-family: 'Nova Mono', monospace;
     }
 }

@@ -14,7 +14,7 @@ const Menu = ({ onClick }: CloseMenu) => {
 
     }
 
-    return <AllLinks onClick={onClick} className="text-slate-50 flex flex-col p-4 items-center pt-60 text-2xl gap-y-8 bg-black opacity-90 h-screen"/>
+    return <AllLinks onClick={onClick} className="text-slate-50 flex flex-col p-4 items-center pt-60 text-2xl gap-y-8 bg-black opacity-90 h-screen "/>
 
 }
 
