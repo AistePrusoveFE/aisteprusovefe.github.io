@@ -12,11 +12,11 @@ const AllLinks = ({ onClick, className }: CloseMenu) => {
 
     return (
         <div className={`${className ?? ''}`}>
-            <ToggleTheme />
             <SingleNavlink linkId="about" text="about" onClick={onClick} />
             <SingleNavlink linkId="works" text="works" onClick={onClick} />
             <SingleNavlink linkId="blog" text="articles" onClick={onClick} />
             <BtnIcon onClick={openUrl} className="" icon={<RiInstagramLine />} />
+            <ToggleTheme />
         </div>
     )
 

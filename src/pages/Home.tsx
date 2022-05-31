@@ -17,11 +17,9 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
             >
                 <div className="max-w-[550px] md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto">
-                    <div className="">
-                        <Navbar />
-                        <Hero />
-                        <Placeholder />
-                    </div>
+                    <Navbar />
+                    <Hero />
+                    <Placeholder />
                     <About />
                     <Projects />
                     <Blog />

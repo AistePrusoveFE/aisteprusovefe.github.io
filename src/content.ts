@@ -19,19 +19,19 @@ interface DataList {
 const data: DataList = {
     about: [
         {
-            title: 'Aiste Prusove - Who this?',
+            title: 'My Story',
             info: 'Since teenager years I was into multimedia, but somehow turned different direction and was working jobs like - administrator, receptionist or consultant. However I always felt my inner artist knocking and really desired creative work. In 2020 I finally decided to change my career and stepped in IT industry. Learned programming, practiced design & illustration skills, and here we are - in my developed page. 😎'
         },
         {
-            title: 'My Vision & Mission',
+            title: 'Vision & Mission',
             info: 'I am to help people or companies in developing their product and ofc share it with the world. I am trying to keep my code clean, elegant and efficient. So as my design.'
         },
         {
-            title: 'Education',
+            title: 'Skills',
             info: ['CodeAcademy - Full Stack Developer (HTML, CSS, SCSS, Javascript, PHP)', 'Self Taught - Typescript, React.js, Next.js, Node.js']
         },
         {
-            title: 'My personality',
+            title: 'Personality',
             info: ['Foodie', 'Loves Nature & Gardening', 'Empathetic', 'Ambivert', 'Positive']
         },
         {
