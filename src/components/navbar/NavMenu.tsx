@@ -18,7 +18,7 @@ const NavMenu = () => {
     }
 
     return (
-        <div className={`${showMenu ? 'fixed top-4 right-4' : ''}`}>
+        <div className={`${showMenu ? 'fixed top-6 right-6' : ''}`}>
             <BtnIcon className={isMedium ? 'hidden' : 'relative z-20 text-3xl text-pink-300'} onClick={showMenuHandler} icon={ showMenu ? <RiCloseFill/> : <RiMenu5Fill /> } />
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}

@@ -14,7 +14,7 @@ const SingleFact = ({ title, info, badges }: SingleFactProps) => {
         if (badges) {
             return <ul className="py-2 flex flex-wrap dark:bg-zinc-700">{info.map((item, index) => {
                 return <li className="p-2 pl-0" key={index}>
-                            <img src={item} className="rounded-md"/>
+                            <img src={item} alt="skill badge" className="rounded-md"/>
                         </li>})}
                     </ul>
         }
