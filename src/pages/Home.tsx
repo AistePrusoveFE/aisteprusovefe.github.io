@@ -9,10 +9,11 @@ import Projects from "../components/Projects"
 const Home = () => {
     return (
         <> 
+
+            <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">  
             <div className="w-full bg-zinc-900">
                 <Navbar />
             </div>
-            <div className="bg-gradient-to-r from-pink-200 to-pink-400 h-screen p-2">  
                 <motion.div
                     className="bg-red-50 dark:bg-zinc-900 transition-colors text-zinc-700"
                     initial={{ opacity: 0 }}
