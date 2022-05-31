@@ -10,8 +10,9 @@ const About = () => {
     return (
         <Wrapper>
             <div id="about">
-                <SectionTitle text="I just have a passion for &lt;code&gt; &amp;&amp; &#10000;design&#9998; " />
-                <SectionSubtitle text="" />
+                <SectionSubtitle text="a girl with a passion for" />
+                <SectionTitle text="&lt;code&gt; &amp;&amp; &#10000;design&#9998; " />
+
                 <div className="mt-4">
                     { facts.map((fact, index) => {
                         return <SingleFact key={index} {...fact}/>

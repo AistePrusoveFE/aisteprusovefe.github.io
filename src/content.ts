@@ -13,12 +13,22 @@ export interface SingleArticleProps extends SingleProjectProps { }
 
 
 interface DataList {
+    aisteLoves: string[],
     about: SingleFactProps[],
     projects: SingleProjectProps[],
     articles: SingleArticleProps[]
 }
 
 const data: DataList = {
+    aisteLoves: [
+        'loves apples & PB',
+        'is actually a Sim',
+        'grows her own veggies & fruits',
+        'has 2 meow meows',
+        'paints illustrations',
+        'loves cooking',
+        'is thankful for coming by! ❤️'
+    ],
     about: [
         {
             title: 'My Story',
