@@ -21,13 +21,13 @@ interface DataList {
 
 const data: DataList = {
     aisteLoves: [
-        'loves apples & PB',
-        'is actually a Sim',
+        'loves apples & Peanut Butter',
+        'is actually a Sim - Sul Sul!',
         'grows her own veggies & fruits',
         'has 2 meow meows',
-        'paints illustrations',
+        'absolutely loves nature',
         'loves cooking',
-        'is thankful for coming by! ❤️'
+        'is happy to see you here! ❤️'
     ],
     about: [
         {

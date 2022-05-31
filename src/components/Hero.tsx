@@ -32,9 +32,9 @@ const Hero = () => {
                     <img src={avatar_2} alt="flat illustration portrait of Aiste Prusove" className="px-2 md:px-0" />
                 </div>
                 <p className="col-start-1 col-span-4 row-start-1 row-span-2 text-center self-end lg:text-left text-6xl mb-4 sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl lg:mb-10 dark:text-zinc-100 chonk text-zinc-900 break-words">Aiste Prusove</p>
-                <p className="col-start-1 col-span-4 text-center lg:text-left text-2xl md:text-3xl break-words dark:text-zinc-100 apolline text-zinc-900">{textChecker(aisteLoves[index])}</p>
+                <p className="col-start-1 col-span-4 text-center lg:text-left text-2xl md:text-3xl self-start xl:text-5xl dark:text-zinc-100 apolline text-zinc-900">{textChecker(aisteLoves[index])}</p>
             </div>
-            <motion.div className="block w-fit mx-auto mt-6 animate-pulse"
+            <motion.div className="block w-fit mx-auto mt-6"
                 whileHover={{
                     scale: 1.2
                 }}
