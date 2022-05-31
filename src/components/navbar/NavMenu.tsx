@@ -18,8 +18,8 @@ const NavMenu = () => {
     }
 
     return (
-        <div className={`${showMenu ? 'fixed top-8 right-6' : ''}`}>
-            <BtnIcon className={isMedium ? 'hidden' : 'relative z-20 text-3xl dark:text-pink-200'} onClick={showMenuHandler} icon={ showMenu ? <RiCloseFill/> : <RiMenu5Fill /> } />
+        <div className={`${showMenu ? 'fixed top-4 right-4' : ''}`}>
+            <BtnIcon className={isMedium ? 'hidden' : 'relative z-20 text-3xl text-pink-300'} onClick={showMenuHandler} icon={ showMenu ? <RiCloseFill/> : <RiMenu5Fill /> } />
             <motion.div 
                 initial={{ y: !showMenu ? "-150%" : 0 }}
                 animate={{ y: showMenu ? 0 : "-150%" }}

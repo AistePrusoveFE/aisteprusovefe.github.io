@@ -1,5 +1,5 @@
 @import url("https://use.typekit.net/wee5yer.css");
-@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&family=Bungee&family=Luckiest+Guy&family=Nova+Mono&family=PT+Sans&family=Rubik+Glitch&family=Rubik+Moonrocks&family=Sigmar+One&family=Syne+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,8 +13,20 @@
 */
     .apolline {
         font-family: apolline, serif;
-        font-family: 'Nova Mono', monospace;
         font-family: 'Syne Mono', monospace;
+    }
+
+    .luckiest {
+        font-family: 'Luckiest Guy', cursive;
+    }
+
+    .chonk {
+        font-family: 'Rubik Moonrocks', cursive;
+        font-family: 'Sigmar One', cursive;
+        font-family: 'Audiowide', cursive;
+        font-family: 'Black Ops One', cursive;
+        font-family: 'Bungee', cursive;
+        font-family: 'Rubik Glitch', cursive;
     }
 
 }
@@ -25,7 +37,10 @@
     }
 
     * {
-        font-family: 'Syne Mono', monospace;
+    /*
         font-family: 'Nova Mono', monospace;
+        font-family: interstate, serif; */
+        font-family: 'Syne Mono', monospace;
+        font-family: 'PT Sans', sans-serif;
     }
 }
