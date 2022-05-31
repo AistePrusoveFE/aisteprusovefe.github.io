@@ -1,5 +1,4 @@
 import { RiInstagramLine } from "react-icons/ri"
-import { Link } from "react-router-dom"
 import BtnIcon from "../../ui/BtnIcon"
 import ToggleTheme from "../../ui/ToggleTheme"
 import { CloseMenu } from "./Menu"
@@ -14,7 +13,6 @@ const AllLinks = ({ onClick, className }: CloseMenu) => {
     return (
         <div className={`${className ?? ''}`}>
             <ToggleTheme />
-            {/* <Link to="/test" className="font-extrabold">Test</Link> */}
             <SingleNavlink linkId="about" text="about" onClick={onClick} />
             <SingleNavlink linkId="works" text="works" onClick={onClick} />
             <SingleNavlink linkId="blog" text="articles" onClick={onClick} />
