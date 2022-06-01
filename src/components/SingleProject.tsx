@@ -6,8 +6,11 @@ const SingleProject = ({ title, content }: SingleProjectProps) => {
     return (
         <GridCol size="h-40">
             <h4>{title}</h4>
-            <p>{content}</p>
+            <div className="h-full">
+                <iframe src={content} width="100%"></iframe>
+            </div>
         </GridCol>
+
     )
 }
 

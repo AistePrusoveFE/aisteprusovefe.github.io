@@ -1,4 +1,3 @@
-import data from "../content";
 import SectionSubtitle from "../ui/SectionSubtitle";
 import SectionTitle from "../ui/SectionTitle";
 import Wrapper from "../ui/Wrapper";

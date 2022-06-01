@@ -55,7 +55,7 @@ const data: DataList = {
     projects: [
         {
             title: 'Creta Nail and Beauty',
-            content: 'lalalala'
+            content: 'https://jade-fudge-91c3a3.netlify.app/'
         },
         {
             title: 'Meal Planner',
