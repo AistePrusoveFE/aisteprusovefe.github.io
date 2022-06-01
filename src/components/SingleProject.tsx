@@ -7,7 +7,7 @@ const SingleProject = ({ title, content }: SingleProjectProps) => {
         <GridCol size="h-40">
             <h4>{title}</h4>
             <div className="h-full">
-                <iframe src={content} width="100%"></iframe>
+                <a href="https://jade-fudge-91c3a3.netlify.app/">Visit Page</a>
             </div>
         </GridCol>
 
