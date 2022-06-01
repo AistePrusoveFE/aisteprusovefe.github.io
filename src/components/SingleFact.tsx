@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
 import { SingleFactProps } from '../content';
+import { ThemeContext } from '../context/theme-context';
 import BtnIcon from '../ui/BtnIcon';
 
 interface AccordionProps extends SingleFactProps {
@@ -10,6 +11,7 @@ interface AccordionProps extends SingleFactProps {
 
 const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
     const [expanded, setExpanded] = useState<false | number>(false)
+    const { theme } = useContext(ThemeContext)
     const isOpen = index === expanded
 
     const printInfo = (info: string[], badges?: boolean) => {
@@ -31,9 +33,13 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
         <div className="mb-2">
             <motion.div
                 initial={false}
-                animate={{ backgroundColor: isOpen ? "#FF0088" : "#0055FF" }}
+                animate={{ 
+                    backgroundColor: isOpen ? "#FF0088" // tamsu & atidaryta - bg
+                    : !isOpen && theme === "dark" ? "#0055FF" // tamsu & uždaryta - bg-
+                    : "#27272a" // šviesu & uždaryta - bg-zinc-800
+                }}
                 onClick={() => setExpanded(isOpen ? false : index)}
-                className={`dark:text-zinc-200 border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] flex items-center bg-red-100 dark:bg-zinc-800 cursor-pointer py-2 lg:py-6`}
+                className={`text-zinc-50 border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] flex items-center bg-red-100 dark:bg-zinc-800 cursor-pointer py-2 lg:py-6`}
             >
                 <BtnIcon icon={expanded ? <RiArrowUpSFill /> : <RiArrowDownSFill />} />
                 <h4 className="font-bold apolline lg:text-lg">{title}</h4>
@@ -53,7 +59,7 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
                             duration: 0.8, 
                             ease: [0.04, 0.62, 0.23, 0.98]
                         }}
-                        className={`${badges ? 'dark:bg-zinc-700' : 'dark:bg-zinc-800'} pl-8 bg-red-100  text-justify border-l-4 border-l-red-400 dark:border-l-[#FF0088] dark:text-zinc-200`}>
+                        className={`${badges ? 'dark:bg-zinc-700' : 'dark:bg-zinc-800'} pl-8 bg-red-100  text-justify border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] dark:text-zinc-200`}>
                             <motion.div
                                 variants={{
                                     collapsed: { scale: 0.9 }, 

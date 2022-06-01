@@ -1,6 +1,20 @@
 @import url("https://use.typekit.net/wee5yer.css");
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&family=Bungee&family=Luckiest+Guy&family=Nova+Mono&family=PT+Sans&family=Rubik+Glitch&family=Rubik+Moonrocks&family=Sigmar+One&family=Syne+Mono&display=swap');
 
+/*
+.color-theme_GAMA-DE-COLORES-1-hex { color: #F8C4C8; }
+.color-theme_GAMA-DE-COLORES-2-hex { color: #EC6383; }
+.color-theme_GAMA-DE-COLORES-3-hex { color: #E6DFDF; }
+.color-theme_GAMA-DE-COLORES-4-hex { color: #C28DB8; }
+.color-theme_GAMA-DE-COLORES-5-hex { color: #DC80A8; }
+
+.color-theme_GAMA-DE-COLORES-1-rgba { color: rgba(248, 196, 200, 1); }
+.color-theme_GAMA-DE-COLORES-2-rgba { color: rgba(236, 99, 131, 1); }
+.color-theme_GAMA-DE-COLORES-3-rgba { color: rgba(230, 223, 223, 1); }
+.color-theme_GAMA-DE-COLORES-4-rgba { color: rgba(194, 141, 184, 1); }
+.color-theme_GAMA-DE-COLORES-5-rgba { color: rgba(220, 128, 168, 1); }
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
