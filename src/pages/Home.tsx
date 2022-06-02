@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import About from "../components/About"
-import Blog from "../components/Blog"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
@@ -9,7 +8,6 @@ import Projects from "../components/Projects"
 const Home = () => {
     return (
         <> 
-
             <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">  
             <div className="w-full bg-zinc-900">
                 <Navbar />
@@ -25,7 +23,7 @@ const Home = () => {
                         <Hero />
                         <About />
                         <Projects />
-                        <Blog />
+                        {/* <Blog /> */}
                         <Footer />
                     </div>
                 </motion.div>

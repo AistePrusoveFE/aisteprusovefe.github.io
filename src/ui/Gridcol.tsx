@@ -11,6 +11,7 @@ const GridCol = ({ children, size, className }: GridColumn) => {
         <motion.div 
             whileHover={{
                 // scale: 1.1,
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
                 borderColor: '#FF0088', 
                 transition: {
                     duration: 0.5

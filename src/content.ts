@@ -5,9 +5,12 @@ export interface SingleFactProps {
 }
 
 export interface SingleProjectProps {
+    category: CategoryType,
     title: string,
-    content: string | ContentProps
+    content: ContentProps
 }
+
+export type CategoryType = 'web' | 'design' | 'art' 
 
 interface ContentProps {
     url: string,
@@ -15,7 +18,10 @@ interface ContentProps {
     img: string
 }
 
-export interface SingleArticleProps extends SingleProjectProps { }
+export interface SingleArticleProps {
+    title: string,
+    content: string 
+}
 
 
 interface DataList {
@@ -88,7 +94,8 @@ const data: DataList = {
         },
     ],
     projects: [
-        {
+        {   
+            category: 'web',
             title: 'Creta Nails and Beauty',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -97,24 +104,58 @@ const data: DataList = {
             }
         },
         {
+            category: 'web',
             title: 'Meal Planner',
-            content: 'lalalala'
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: './projects-img/1.png'
+            }
         },
         {
+            category: 'web',
             title: 'E-Shop Nursery Garden',
-            content: 'lalalala'
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: './projects-img/1.png'
+            }
         },
         {
+            category: 'design',
             title: 'Mood Tracker',
-            content: 'lalalala'
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: './projects-img/1.png'
+            }
         },
         {
+            category: 'design',
             title: 'Recipes Database',
-            content: 'lalalala'
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: './projects-img/1.png'
+            }
         },
         {
+            category: 'art',
             title: 'Pizza Quizz',
-            content: 'lalalala'
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: './projects-img/1.png'
+            }
+        },
+        {
+            category: 'art',
+            title: 'Illustrations Gallery',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: './projects-img/1.png'
+            }
         },
     ],
     articles: [
