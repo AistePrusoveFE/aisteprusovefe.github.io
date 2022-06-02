@@ -7,9 +7,21 @@ import SingleProject from "./SingleProject";
 
 const Projects = () => {
     const [projects, setProjects] = useState(data.projects)
+    const [filteredCategory, setFilteredCategory] = useState(false)
 
     const onFilterItem = (category: CategoryType) => {
-        setProjects(data.projects.filter(categoryItem => categoryItem.category === category))
+        if (!filteredCategory || (filteredCategory && !projects.every(project => project.category === category))) {
+            setProjects(data.projects.filter(categoryItem => categoryItem.category === category))
+            setFilteredCategory(true)
+        } 
+        
+        if (filteredCategory){
+            if (projects.every(project => project.category === category)){
+                setProjects(data.projects)
+                setFilteredCategory(false)
+            }
+        } 
+
     }
 
     return (
