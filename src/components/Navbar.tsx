@@ -1,4 +1,4 @@
-import logo_black from "../assets/img/black.png"
+import logo_black from "../assets/black.png"
 import NavMenu from "./navbar/NavMenu"
 
 const Navbar = () => {

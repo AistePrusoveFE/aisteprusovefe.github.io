@@ -1,6 +1,6 @@
 import Wrapper from "../ui/Wrapper";
-// import avatar from "../assets/img/portrait.png"
-import avatar_2 from "../assets/img/portrait_2.png"
+// import avatar from "../assets/portrait.png"
+import avatar_2 from "../assets/portrait_2.png"
 import { BiRefresh } from 'react-icons/bi'
 import BtnIcon from "../ui/BtnIcon";
 import { useState } from "react";

@@ -5,7 +5,7 @@ const SingleArticle = ({ title, content }: SingleArticleProps) => {
     return (
         <GridCol size="h-40">
             <h4>{title}</h4>
-            <p>{content}</p>
+            {typeof content === 'string' ? <p>{content}</p> : <></>}
         </GridCol>
     )
 }

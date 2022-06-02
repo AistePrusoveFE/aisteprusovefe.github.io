@@ -1,14 +1,31 @@
 import { SingleProjectProps } from "../content"
 import GridCol from "../ui/Gridcol"
 
-
 const SingleProject = ({ title, content }: SingleProjectProps) => {
-    return (
-        <GridCol size="h-40">
-            <h4>{title}</h4>
-            <div className="h-full">
-                <a href="https://jade-fudge-91c3a3.netlify.app/">Visit Page</a>
+    let projectContent = <></>;
+
+    if (typeof content !== 'string') {
+        const { url, subtitle, img } = content
+
+        projectContent = (
+            <div>
+                <h5>{subtitle}</h5>
+                <div className="h-full">
+                    <img src={img} alt="webpage preview" />
+                    <a href={url}>Visit Page</a>
+                </div>
             </div>
+        )
+    } else {
+        projectContent = <p>{content}</p>
+    }
+
+    
+    // border-[#FF0088]
+    return (
+        <GridCol className="border-2 border-zinc-800">
+            <h4>{title}</h4>
+            {projectContent}
         </GridCol>
 
     )

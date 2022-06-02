@@ -8,9 +8,8 @@ const Projects = () => {
     const projects = data.projects
     return (
         <Wrapper>
-            <SectionTitle text="My Works"/>
-            <SectionSubtitle text="Latest"/>
-            <div id="works" className="grid gap-y-4 md:grid-cols-2 md:gap-x-4">
+            <SectionTitle text="Check My Works"/>
+            <div id="works" className="grid gap-y-4 md:gap-12 md:grid-cols-2">
                 { projects.map((project, index) => {
                     return <SingleProject key={index} title={project.title} content={project.content} />
                 })}

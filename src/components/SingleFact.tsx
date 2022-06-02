@@ -17,9 +17,14 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
     const printInfo = (info: string[], badges?: boolean) => {
         if (badges) {
             return <ul className="py-2 flex flex-wrap">{info.map((item, index) => {
-                return <li className="p-2 pl-0" key={index}>
-                    <img src={item} alt="skill badge" className="rounded-md" />
-                </li>
+                if (item.includes('https')){
+                    return (
+                        <li className="p-2 pl-0" key={index}>
+                            <img src={item} alt="skill badge" className="rounded-md" />
+                        </li>)
+                }
+
+                return <li className="p-2 pl-0" key={index}>{item}</li>
             })}
             </ul>
         }
