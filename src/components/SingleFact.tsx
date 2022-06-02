@@ -16,7 +16,7 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
 
     const printInfo = (info: string[], badges?: boolean) => {
         if (badges) {
-            return <ul className="py-2 flex flex-wrap">{info.map((item, index) => {
+            return <ul className="py-2 flex flex-wrap justify-center">{info.map((item, index) => {
                 if (item.includes('https')){
                     return (
                         <li className="p-2 pl-0" key={index}>
@@ -24,7 +24,7 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
                         </li>)
                 }
 
-                return <li className="p-2 pl-0" key={index}>{item}</li>
+                return <li className="p-2 pl-0 w-full text-center" key={index}>{item}</li>
             })}
             </ul>
         }

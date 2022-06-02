@@ -4,6 +4,7 @@ interface TagProps {
 }
 
 const Tag = ({ text, onClick }: TagProps) => {
+    
     return (
         <button
             onClick={onClick}

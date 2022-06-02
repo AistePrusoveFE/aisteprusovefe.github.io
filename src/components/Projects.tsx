@@ -14,14 +14,14 @@ const Projects = () => {
 
     return (
         <Wrapper className="px-4">
-            <SectionTitle text="Check My Works"/>
+            <SectionTitle text="Check My Works" />
             <div className="py-4 text-center">
-                <Tag text="web development" onClick={() => onFilterItem('web')}/>
-                <Tag text="design &amp; branding" onClick={() => onFilterItem('design')}/>
-                <Tag text="illustrations" onClick={() => onFilterItem('art')}/>
+                <Tag text="web development" onClick={() => onFilterItem('web')} />
+                <Tag text="design &amp; branding" onClick={() => onFilterItem('design')} />
+                <Tag text="illustrations" onClick={() => onFilterItem('art')} />
             </div>
-            <div id="works" className="grid gap-y-4 md:gap-12 md:grid-cols-2">
-                { projects.map((project, index) => {
+            <div id="works" className="mt-8 grid gap-y-4 md:gap-12 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project, index) => {
                     return <SingleProject key={index} {...project} />
                 })}
             </div>
