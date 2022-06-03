@@ -2,14 +2,15 @@ import { SingleProjectProps } from "../content"
 import GridCol from "../ui/Gridcol"
 
 const SingleProject = ({ title, content, category }: SingleProjectProps) => {
-    let projectContent = <></>;
+    let projectContent: JSX.Element;
 
     if (typeof content !== 'string') {
         const { url, subtitle, img } = content
 
         projectContent = (
             <div>
-                <h5>{category}</h5>
+                <h5 className="p-2 text-black font-bold text-2xl">{ category.join(', ')}</h5>
+                <h5>{subtitle}</h5>
                 <div className="h-full">
                     <img src={img} alt="webpage preview" />
                     <a href={url}>Visit Page</a>

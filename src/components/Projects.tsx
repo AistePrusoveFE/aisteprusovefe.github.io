@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data, { CategoryType } from "../content";
+import data, { CategoryType, SingleProjectProps } from "../content";
 import SectionTitle from "../ui/SectionTitle";
 import Tag from "../ui/Tag";
 import Wrapper from "../ui/Wrapper";
@@ -10,22 +10,38 @@ const Projects = () => {
     const [filteredCategory, setFilteredCategory] = useState(false)
 
     const onFilterItem = (category: CategoryType) => {
-        // paspaudziu ant kazkokios kategorijos
-        // jeigu nera isfiltruota arba isfiltruota, bet ne ta kategorija ant kurios spaudziama
-        // tada rodau ant naujos paspaustos kategorijos itemus ir nustatau state i true (isfiltruota)
-        if (!filteredCategory || (filteredCategory && !projects.every(project => project.category === category))) {
-            setProjects(data.projects.filter(categoryItem => categoryItem.category === category))
-            setFilteredCategory(true)
-        } 
-        
-        // jeigu isfiltruota ir paspaudziu ant tos pacios kategorijos, tada nustatyt i pradine busena
-        if (filteredCategory){
-            if (projects.every(project => project.category === category)){
-                setProjects(data.projects)
-                setFilteredCategory(false)
-            }
-        } 
+        if (!filteredCategory) {
+            let foundProjects: SingleProjectProps[] = []
+            projects.forEach(project => {
+                if (project.category.includes(category)) {
+                    foundProjects.push(project)
+                }
+            })
 
+            setProjects(foundProjects)
+            setFilteredCategory(true)
+        }
+
+        if (filteredCategory) {
+            projects.forEach(project => {
+                if (project.category.every(prjCat => prjCat === category)) {
+                    setProjects(data.projects)
+                    setFilteredCategory(false)
+                }
+
+                if (!project.category.includes(category)) {
+                    let foundProjects: SingleProjectProps[] = []
+                    data.projects.forEach(project => {
+                        if (project.category.includes(category)) {
+                            foundProjects.push(project)
+                        }
+                    })
+
+                    setProjects(foundProjects)
+                    setFilteredCategory(true)
+                }
+            })
+        }
     }
 
     return (

@@ -5,7 +5,7 @@ export interface SingleFactProps {
 }
 
 export interface SingleProjectProps {
-    category: CategoryType,
+    category: CategoryType[],
     title: string,
     content: ContentProps
 }
@@ -95,7 +95,7 @@ const data: DataList = {
     ],
     projects: [
         {   
-            category: 'web',
+            category: ['web', 'design'],
             title: 'Creta Nails and Beauty',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -104,7 +104,7 @@ const data: DataList = {
             }
         },
         {
-            category: 'web',
+            category: ['web'],
             title: 'Meal Planner',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -113,7 +113,7 @@ const data: DataList = {
             }
         },
         {
-            category: 'web',
+            category: ['web'],
             title: 'E-Shop Nursery Garden',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -122,7 +122,7 @@ const data: DataList = {
             }
         },
         {
-            category: 'design',
+            category: ['design'],
             title: 'Mood Tracker',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -131,7 +131,7 @@ const data: DataList = {
             }
         },
         {
-            category: 'design',
+            category: ['design'],
             title: 'Recipes Database',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -140,7 +140,7 @@ const data: DataList = {
             }
         },
         {
-            category: 'art',
+            category: ['art', 'web', 'design'],
             title: 'Pizza Quizz',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
@@ -149,7 +149,7 @@ const data: DataList = {
             }
         },
         {
-            category: 'art',
+            category: ['art'],
             title: 'Illustrations Gallery',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
