@@ -7,11 +7,10 @@ import SingleProject from "./SingleProject";
 
 const Projects = () => {
     const [projects, setProjects] = useState(data.projects)
-    const [isFiltered, setIsFiltered] = useState(false)
     const [filteredCat, setFilteredCat] = useState('')
 
-    const onFilterItem = (category: CategoryType) => {
-        if (!isFiltered) {
+    const onFilterCategory = (category: CategoryType) => {
+        if (!filteredCat) {
             let foundProjects: SingleProjectProps[] = []
             projects.forEach(project => {
                 if (project.category.includes(category)) {
@@ -20,16 +19,14 @@ const Projects = () => {
             })
 
             setProjects(foundProjects)
-            setIsFiltered(true)
             setFilteredCat(category)
         }
 
-        if (isFiltered) {
+        if (filteredCat) {
             projects.forEach(project => {
                 if (project.category.every(prjCat => prjCat === category)) {
 
                     setProjects(data.projects)
-                    setIsFiltered(false)
                     setFilteredCat('')
                 }
 
@@ -42,7 +39,6 @@ const Projects = () => {
                     })
 
                     setProjects(foundProjects)
-                    setIsFiltered(true)
                     setFilteredCat(category)
                 }
             })
@@ -57,19 +53,19 @@ const Projects = () => {
                     filteredCat={filteredCat}
                     category="web" 
                     text="web development" 
-                    onClick={() => onFilterItem('web')} 
+                    onClick={() => onFilterCategory('web')} 
                 />
                 <Tag 
                     filteredCat={filteredCat}
                     category="design" 
                     text="design &amp; branding" 
-                    onClick={() => onFilterItem('design')} 
+                    onClick={() => onFilterCategory('design')} 
                 />
                 <Tag 
                     filteredCat={filteredCat}
                     category="art" 
                     text="illustrations" 
-                    onClick={() => onFilterItem('art')} 
+                    onClick={() => onFilterCategory('art')} 
                 />
             </div>
             <div id="works" className="mt-8 grid gap-y-4 md:gap-12 md:grid-cols-2 lg:grid-cols-3">
