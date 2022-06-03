@@ -7,10 +7,11 @@ import SingleProject from "./SingleProject";
 
 const Projects = () => {
     const [projects, setProjects] = useState(data.projects)
-    const [filteredCategory, setFilteredCategory] = useState(false)
+    const [isFiltered, setIsFiltered] = useState(false)
+    const [filteredCat, setFilteredCat] = useState('')
 
     const onFilterItem = (category: CategoryType) => {
-        if (!filteredCategory) {
+        if (!isFiltered) {
             let foundProjects: SingleProjectProps[] = []
             projects.forEach(project => {
                 if (project.category.includes(category)) {
@@ -19,14 +20,17 @@ const Projects = () => {
             })
 
             setProjects(foundProjects)
-            setFilteredCategory(true)
+            setIsFiltered(true)
+            setFilteredCat(category)
         }
 
-        if (filteredCategory) {
+        if (isFiltered) {
             projects.forEach(project => {
                 if (project.category.every(prjCat => prjCat === category)) {
+
                     setProjects(data.projects)
-                    setFilteredCategory(false)
+                    setIsFiltered(false)
+                    setFilteredCat('')
                 }
 
                 if (!project.category.includes(category)) {
@@ -38,7 +42,8 @@ const Projects = () => {
                     })
 
                     setProjects(foundProjects)
-                    setFilteredCategory(true)
+                    setIsFiltered(true)
+                    setFilteredCat(category)
                 }
             })
         }
@@ -48,9 +53,24 @@ const Projects = () => {
         <Wrapper className="px-4">
             <SectionTitle text="Check My Works" />
             <div className="py-4 text-center">
-                <Tag text="web development" onClick={() => onFilterItem('web')} />
-                <Tag text="design &amp; branding" onClick={() => onFilterItem('design')} />
-                <Tag text="illustrations" onClick={() => onFilterItem('art')} />
+                <Tag 
+                    filteredCat={filteredCat}
+                    category="web" 
+                    text="web development" 
+                    onClick={() => onFilterItem('web')} 
+                />
+                <Tag 
+                    filteredCat={filteredCat}
+                    category="design" 
+                    text="design &amp; branding" 
+                    onClick={() => onFilterItem('design')} 
+                />
+                <Tag 
+                    filteredCat={filteredCat}
+                    category="art" 
+                    text="illustrations" 
+                    onClick={() => onFilterItem('art')} 
+                />
             </div>
             <div id="works" className="mt-8 grid gap-y-4 md:gap-12 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, index) => {
