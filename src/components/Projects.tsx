@@ -10,11 +10,15 @@ const Projects = () => {
     const [filteredCategory, setFilteredCategory] = useState(false)
 
     const onFilterItem = (category: CategoryType) => {
+        // paspaudziu ant kazkokios kategorijos
+        // jeigu nera isfiltruota arba isfiltruota, bet ne ta kategorija ant kurios spaudziama
+        // tada rodau ant naujos paspaustos kategorijos itemus ir nustatau state i true (isfiltruota)
         if (!filteredCategory || (filteredCategory && !projects.every(project => project.category === category))) {
             setProjects(data.projects.filter(categoryItem => categoryItem.category === category))
             setFilteredCategory(true)
         } 
         
+        // jeigu isfiltruota ir paspaudziu ant tos pacios kategorijos, tada nustatyt i pradine busena
         if (filteredCategory){
             if (projects.every(project => project.category === category)){
                 setProjects(data.projects)

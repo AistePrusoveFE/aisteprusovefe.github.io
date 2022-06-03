@@ -1,7 +1,7 @@
 import { SingleProjectProps } from "../content"
 import GridCol from "../ui/Gridcol"
 
-const SingleProject = ({ title, content }: SingleProjectProps) => {
+const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     let projectContent = <></>;
 
     if (typeof content !== 'string') {
@@ -9,7 +9,7 @@ const SingleProject = ({ title, content }: SingleProjectProps) => {
 
         projectContent = (
             <div>
-                <h5>{subtitle}</h5>
+                <h5>{category}</h5>
                 <div className="h-full">
                     <img src={img} alt="webpage preview" />
                     <a href={url}>Visit Page</a>
