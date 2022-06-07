@@ -1,12 +1,13 @@
 import { useState } from "react";
 import data from "../content";
-import SectionTitle from "../ui/SectionTitle";
 import Tags from "../ui/Tags";
 import Wrapper from "../ui/Wrapper";
+import SectionTitle from "../ui/SectionTitle";
 import SingleProject from "./SingleProject";
 
 const Projects = () => {
     const [projects, setProjects] = useState(data.projects)
+
     const categoryItems = Array.from(new Set(data.projects.map(prj => prj.category)))
 
     const filterItem = (curCat: string) => {
