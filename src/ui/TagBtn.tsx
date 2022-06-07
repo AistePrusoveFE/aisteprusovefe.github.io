@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { CategoryType } from "../content"
 
 interface SingleTagProps {
@@ -9,7 +8,6 @@ interface SingleTagProps {
 }
 
 const TagBtn = ({ catItem, onActivate, onDeactivate, active }: SingleTagProps) => {
-    // const [active, setIsActive] = useState(false)
 
     const onActiveToggle = () => {
         if (active) {
@@ -17,14 +15,12 @@ const TagBtn = ({ catItem, onActivate, onDeactivate, active }: SingleTagProps) =
         } else {
             onActivate(catItem)
         }
-
-        // setIsActive(!active)
     }
 
     return (
         <button
             onClick={onActiveToggle}
-            className={`${active ? 'bg-[#ff0088]' : 'bg-zinc-900'} inline-block px-4 text-xs w-fit py-1 m-1 rounded-full border-2 border-zinc-900  text-zinc-50 hover:border-[#ff0088]`}>
+            className={`${active ? 'bg-[#ff0088] border-[#ff0088]' : 'bg-zinc-900'} inline-block px-4 text-xs w-fit py-1 m-1 rounded-full border-2 border-zinc-900 text-zinc-50 hover:border-[#ff0088]`}>
             {catItem}
         </button>
     )
