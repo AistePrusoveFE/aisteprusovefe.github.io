@@ -1,10 +1,10 @@
-import { CategoryType, SingleProjectProps } from "../content"
+import { SingleProjectProps } from "../content"
 import GridCol from "../ui/Gridcol"
 
 const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     const { url, subtitle, img } = content
 
-    const categoryFiller = (category: CategoryType) => {
+    const categoryFiller = (category: string) => {
         const beautify = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()
 
         if (category === 'art' || category === 'branding'){

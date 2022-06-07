@@ -5,7 +5,7 @@ export interface SingleFactProps {
 }
 
 export interface SingleProjectProps {
-    category: CategoryType,
+    category: string,
     title: string,
     content: ContentProps
 }
