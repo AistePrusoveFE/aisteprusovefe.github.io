@@ -1,16 +1,30 @@
 import { useState } from "react"
+import { CategoryType } from "../content"
 
 interface SingleTagProps {
-    catItem: any
-    onClick: () => void
+    catItem: CategoryType
+    onActivate: (catItem: CategoryType) => void
+    onDeactivate: (catItem: CategoryType) => void
+    active: boolean
 }
 
-const TagBtn = ({catItem, onClick}: SingleTagProps) => {
+const TagBtn = ({ catItem, onActivate, onDeactivate, active }: SingleTagProps) => {
+    // const [active, setIsActive] = useState(false)
+
+    const onActiveToggle = () => {
+        if (active) {
+            onDeactivate(catItem)
+        } else {
+            onActivate(catItem)
+        }
+
+        // setIsActive(!active)
+    }
 
     return (
         <button
-            onClick={() => {onClick(); }}
-            className={`bg-zinc-900 inline-block px-4 text-xs w-fit py-1 m-1 rounded-full border-2 border-zinc-900  text-zinc-50 hover:border-[#ff0088]`}>
+            onClick={onActiveToggle}
+            className={`${active ? 'bg-[#ff0088]' : 'bg-zinc-900'} inline-block px-4 text-xs w-fit py-1 m-1 rounded-full border-2 border-zinc-900  text-zinc-50 hover:border-[#ff0088]`}>
             {catItem}
         </button>
     )
