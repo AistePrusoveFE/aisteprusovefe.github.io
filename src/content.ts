@@ -5,12 +5,12 @@ export interface SingleFactProps {
 }
 
 export interface SingleProjectProps {
-    category: CategoryType[],
+    category: CategoryType,
     title: string,
     content: ContentProps
 }
 
-export type CategoryType = 'web' | 'design' | 'art' 
+export type CategoryType = 'web' | 'art' | 'branding'
 
 interface ContentProps {
     url: string,
@@ -95,66 +95,73 @@ const data: DataList = {
     ],
     projects: [
         {   
-            category: ['web', 'design'],
+            category: 'web',
             title: 'Creta Nails and Beauty',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
+                // img: './projects-img/1.png'
+                img: 'https://www.sigmawebsolutions.com/wp-content/uploads/2020/05/AdobeStock_256229414.jpg'
             }
         },
         {
-            category: ['web'],
-            title: 'Meal Planner',
-            content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
-            }
-        },
-        {
-            category: ['web'],
-            title: 'E-Shop Nursery Garden',
-            content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
-            }
-        },
-        {
-            category: ['design'],
-            title: 'Mood Tracker',
-            content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
-            }
-        },
-        {
-            category: ['design'],
-            title: 'Recipes Database',
-            content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
-            }
-        },
-        {
-            category: ['art', 'web', 'design'],
-            title: 'Pizza Quizz',
-            content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
-            }
-        },
-        {
-            category: ['art'],
+            category: 'art',
             title: 'Illustrations Gallery',
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                img: './projects-img/1.png'
+                // img: './projects-img/1.png'
+                img: 'https://design4users.com/wp-content/uploads/2021/03/digital-art-andrey-prokopenko-illustration.png.pagespeed.ce.U3_BJ-DAzE.png'
+            }
+        },
+        {
+            category: 'branding',
+            title: 'Meal Planner',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                // img: './projects-img/1.png'
+                img: 'https://andystalman.com/as/wp-content/uploads/Branding.jpg'
+            }
+        },
+        {
+            category: 'web',
+            title: 'E-Shop Nursery Garden',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                // img: './projects-img/1.png'
+                img: 'https://dmlab.edu.gr/assets/media/2019/09/Web_Development.png'
+            }
+        },
+        {
+            category: 'web',
+            title: 'Mood Tracker',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                // img: './projects-img/1.png'
+                img: 'https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000'
+            }
+        },
+        {
+            category: 'art',
+            title: 'Pizza Quizz',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                // img: './projects-img/1.png'
+                img: 'https://i.pinimg.com/originals/d3/02/e4/d302e4d06d9afae957b686985215270a.jpg'
+            }
+        },
+        {
+            category: 'web',
+            title: 'Recipes Database',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                // img: './projects-img/1.png'
+                img: 'https://img.freepik.com/free-photo/word-design-written-top-colorful-geometric-3d-shapes_2227-1663.jpg'
             }
         },
     ],
