@@ -17,7 +17,7 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
     const printInfo = (info: string[], badges?: boolean) => {
         if (badges) {
             return <ul className="py-2 flex flex-wrap justify-center">{info.map((item, index) => {
-                if (item.includes('https')){
+                if (item.includes('https')) {
                     return (
                         <li className="p-2 pl-0" key={index}>
                             <img src={item} alt="skill badge" className="rounded-md" />
@@ -38,10 +38,10 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
         <div className="mb-2">
             <motion.div
                 initial={false}
-                animate={{ 
+                animate={{
                     backgroundColor: isOpen && theme === 'light' ? "#FF0088" // tamsu & atidaryta - pink
-                    : !isOpen && theme === "dark" ? "#27272a" // tamsu & uždaryta - bg-
-                    : "#27272a" // šviesu & uždaryta - bg-zinc-800
+                        : !isOpen && theme === "dark" ? "#27272a" // tamsu & uždaryta - bg-
+                            : "#27272a" // šviesu & uždaryta - bg-zinc-800
                 }}
                 onClick={() => setExpanded(isOpen ? false : index)}
                 className={`text-zinc-50 border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] flex items-center cursor-pointer py-2 lg:py-6`}
@@ -58,24 +58,24 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
                         exit="collapsed"
                         variants={{
                             open: { opacity: 1, height: "auto" },
-                            collapsed: {opacity: 0, height: 0}
+                            collapsed: { opacity: 0, height: 0 }
                         }}
                         transition={{
-                            duration: 0.8, 
+                            duration: 0.8,
                             ease: [0.04, 0.62, 0.23, 0.98]
                         }}
                         className={`dark:bg-zinc-900 pl-8 text-justify border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] dark:text-zinc-200`}>
-                            <motion.div
-                                variants={{
-                                    collapsed: { scale: 0.9 }, 
-                                    open: { scale: 1 }
-                                }}
-                                transition={{
-                                    duration: 0.8
-                                }}
-                                >
-                                { printInfo(info, badges) }
-                            </motion.div>
+                        <motion.div
+                            variants={{
+                                collapsed: { scale: 0.9 },
+                                open: { scale: 1 }
+                            }}
+                            transition={{
+                                duration: 0.8
+                            }}
+                        >
+                            {printInfo(info, badges)}
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
