@@ -35,8 +35,14 @@ const Projects = () => {
 
     return (
         <Wrapper className="px-4 min-h-screen">
-            <SectionTitle text="Check My Works" />
+            <SectionTitle text="My Projects are created with:" />
+            <div className="flex flex-wrap gap-2 justify-center mb-12">
+                {data.skills.map((skill, i) => {
+                    return <img key={i} src={skill} alt="badge of skill" className="rounded-md" />
+                })}
+            </div>
             <div className="py-4 text-center">
+                <p>Filter Projects:</p>
                 {categoryItems.map((catItem: CategoryType, i: number) => {
                     return (
                         <TagBtn active={activeTags.includes(catItem)} catItem={catItem} onActivate={onActivate} onDeactivate={onDeactivate} key={i} />

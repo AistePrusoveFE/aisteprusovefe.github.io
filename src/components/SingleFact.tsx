@@ -9,29 +9,17 @@ interface AccordionProps extends SingleFactProps {
     index: number
 }
 
-const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
+const SingleFact = ({ title, info, index }: AccordionProps) => {
     const [expanded, setExpanded] = useState<false | number>(false)
     const { theme } = useContext(ThemeContext)
     const isOpen = index === expanded
 
-    const printInfo = (info: string[], badges?: boolean) => {
-        if (badges) {
-            return <ul className="py-2 flex flex-wrap justify-center">{info.map((item, index) => {
-                if (item.includes('https')) {
-                    return (
-                        <li className="p-2 pl-0" key={index}>
-                            <img src={item} alt="skill badge" className="rounded-md" />
-                        </li>)
-                }
-
-                return <li className="p-2 pl-0 w-full text-center" key={index}>{item}</li>
-            })}
-            </ul>
-        }
-
-        return <ul className="py-2">{info.map((item, index) => {
-            return <li className="p-2 pl-0" key={index}>{item}</li>
-        })}</ul>
+    const printInfo = (info: string[]) => {
+        return (
+            <ul className="py-2">{info.map((item, index) => {
+                return <li className="p-2 pl-0" key={index}>{item}</li>
+            })}</ul>
+        )
     }
 
     return (
@@ -74,7 +62,7 @@ const SingleFact = ({ title, info, badges, index }: AccordionProps) => {
                                 duration: 0.8
                             }}
                         >
-                            {printInfo(info, badges)}
+                            {printInfo(info)}
                         </motion.div>
                     </motion.div>
                 )}

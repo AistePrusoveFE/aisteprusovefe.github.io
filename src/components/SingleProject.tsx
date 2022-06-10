@@ -1,16 +1,20 @@
 import { SingleProjectProps } from "../content"
 import GridCol from "../ui/Gridcol"
 
+const beautify = (word: string) => {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
+
 const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     const { url, subtitle, img } = content
 
     const categoryFiller = (category: string) => {
-        const beautify = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()
-
-        if (category === 'art' || category === 'branding'){
-            return beautify
+        if (category === 'art') {
+            return beautify('illustration')
+        } else if (category === 'web') {
+            return beautify(category) + ' Development & Design'
         } else {
-            return beautify + ' & Design'
+            return beautify(category)
         }
     }
 
