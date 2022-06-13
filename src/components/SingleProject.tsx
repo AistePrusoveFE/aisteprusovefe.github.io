@@ -8,7 +8,7 @@ const beautify = (word: string) => {
 const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     const { url, subtitle, img } = content
 
-    const categoryFiller = (category: string) => {
+    const categoryTitle = (category: string) => {
         if (category === 'art') {
             return beautify('illustration')
         } else if (category === 'web') {
@@ -20,15 +20,11 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
 
     // border-[#FF0088]
     return (
-        <GridCol className={`border-2 border-zinc-800`}>
-            <h4>{title}</h4>
-            <div>
-                <h5 className="p-2 font-bold text-2xl">{categoryFiller(category)}</h5>
-                <h5>{subtitle}</h5>
-                <div className="h-full">
-                    <img src={img} alt="webpage preview" className="h-60 object-cover w-full" />
-                    <a href={url} className="inline-block mt-4 p-2">Visit Page</a>
-                </div>
+        <GridCol className="h-72 relative">
+            <img src={img} alt="webpage preview" className="h-full w-full object-cover rounded-md" />
+            <div className="bg-white h-40 w-40 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center flex flex-col items-center justify-center  uppercase p-2 gap-y-2">
+                <h4 className="font-bold text-sm">{title}</h4>
+                <h4 className="text-xs">{categoryTitle(category)}</h4>
             </div>
         </GridCol>
 
