@@ -4,8 +4,12 @@ import Wrapper from "../ui/Wrapper";
 import SectionTitle from "../ui/SectionTitle";
 import SingleProject from "./SingleProject";
 import TagBtn from "../ui/TagBtn";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Projects = () => {
+    const isSmall = useMediaQuery('(min-width: 551px)')
+    const isLarge = useMediaQuery('(min-width: 991px)')
+
     const [activeTags, setActiveTags] = useState<CategoryType[]>([])
 
     const categoryItems = Array.from(new Set(data.projects.map(prj => prj.category)))
