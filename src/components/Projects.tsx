@@ -4,12 +4,8 @@ import Wrapper from "../ui/Wrapper";
 import SectionTitle from "../ui/SectionTitle";
 import SingleProject from "./SingleProject";
 import TagBtn from "../ui/TagBtn";
-import useMediaQuery from "../hooks/useMediaQuery";
 
 const Projects = () => {
-    const isSmall = useMediaQuery('(min-width: 551px)')
-    const isLarge = useMediaQuery('(min-width: 991px)')
-
     const [activeTags, setActiveTags] = useState<CategoryType[]>([])
 
     const categoryItems = Array.from(new Set(data.projects.map(prj => prj.category)))
@@ -53,7 +49,7 @@ const Projects = () => {
                     )
                 })}
             </div>
-            <div id="works" className="mt-8 grid gap-2 grid-cols-2">
+            <div id="works" className="mt-8 grid gap-2 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-4 lg:gap-8">
                 {filteredProjects.map((project, index) => {
                     return <SingleProject key={index} {...project} />
                 })}
