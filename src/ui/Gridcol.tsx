@@ -4,11 +4,13 @@ interface GridColumn {
     children: JSX.Element | JSX.Element[]
     size?: string
     className?: string
+    onClick?: () => void
 }
 
-const GridCol = ({ children, size, className }: GridColumn) => {
+const GridCol = ({ children, size, className, onClick }: GridColumn) => {
     return (
         <motion.div 
+            onClick={onClick}
             whileHover={{
                 // scale: 1.1,
                 boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',

@@ -15,6 +15,7 @@ interface ContentProps {
     url: string,
     subtitle: string,
     img: string
+    shape: string
 }
 
 export interface SingleArticleProps {
@@ -33,23 +34,24 @@ interface DataList {
 
 const data: DataList = {
     aisteLoves: [
-        'loves apples & peanut butter',
+        '🥰 apples & peanut butter',
         'is actually a Sim - sul sul!',
         'grows her own 🍅🥬 & 🍏🍓',
-        'has 2 meow meows',
-        'absolutely ❤️ nature',
+        'has 2 meow meows 🙀😼🐈',
+        'absolutely ❤️ nature 🌳',
         'loves cooking',
+        'thinks summer is the best 😎☀️',
         'is happy to see you here! ❤️'
     ],
     about: [
         {
             title: 'My Story',
             info: [
-                'Since teenager years I was into multimedia, but..', 
-                'Life happened and turned different direction to - administrator, receptionist or consultant jobs.', 
-                'However I always felt my inner artist knocking and really desired creative work so was trying graphic design as hobby or therapy.', 
-                'In 2020 I finally decided to change my career and stepped in IT industry.', 
-                'Learned programming, practiced design & illustration skills, and here we are  in - page, I fully developed. 😎'
+                'Since teenager years I was into multimedia, but life happened..', 
+                '..and turned me into different direction - administrative or consultant jobs.', 
+                'However, my inner artist was knocking and desired creative work, hence digital illustrations came into my life as a therapy/hobby.', 
+                'In 2020 I finally decided to change my career and actually stepped in IT industry as I enrolled into Full Stack Developer program in CodeAcademy coding school.', 
+                'Learned programming, practiced design & illustration skills, and here we are in a page, I fully developed. 😎'
             ]
         },
         {
@@ -64,11 +66,12 @@ const data: DataList = {
         {
             title: 'Personality',
             info: [
-                'Empathetic', 
                 'ENFJ-T', 
+                'Empathetic',
                 'Positive vibes',
                 'Slightly perfectionist', 
                 'Loves nature & gardening', 
+                'Marvel',
                 'Into dark humor & weird stuff',
             ]
         },
@@ -114,8 +117,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://www.sigmawebsolutions.com/wp-content/uploads/2020/05/AdobeStock_256229414.jpg'
+                img: 'https://www.sigmawebsolutions.com/wp-content/uploads/2020/05/AdobeStock_256229414.jpg',
+                shape: './overlays/circle.svg'
             }
         },
         {
@@ -124,8 +127,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://design4users.com/wp-content/uploads/2021/03/digital-art-andrey-prokopenko-illustration.png.pagespeed.ce.U3_BJ-DAzE.png'
+                img: 'https://design4users.com/wp-content/uploads/2021/03/digital-art-andrey-prokopenko-illustration.png.pagespeed.ce.U3_BJ-DAzE.png',
+                shape: './overlays/hexagon.svg'
             }
         },
         {
@@ -134,8 +137,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://andystalman.com/as/wp-content/uploads/Branding.jpg'
+                img: 'https://andystalman.com/as/wp-content/uploads/Branding.jpg',
+                shape: './overlays/hexa.svg'
             }
         },
         {
@@ -144,8 +147,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://dmlab.edu.gr/assets/media/2019/09/Web_Development.png'
+                img: 'https://dmlab.edu.gr/assets/media/2019/09/Web_Development.png',
+                shape: './overlays/circle.svg'
             }
         },
         {
@@ -154,8 +157,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000'
+                img: 'https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000',
+                shape: './overlays/circle.svg'
             }
         },
         {
@@ -164,8 +167,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://i.pinimg.com/originals/d3/02/e4/d302e4d06d9afae957b686985215270a.jpg'
+                img: 'https://i.pinimg.com/originals/d3/02/e4/d302e4d06d9afae957b686985215270a.jpg',
+                shape: './overlays/hexagon.svg'
             }
         },
         {
@@ -174,8 +177,8 @@ const data: DataList = {
             content: {
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                // img: './projects-img/1.png'
-                img: 'https://img.freepik.com/free-photo/word-design-written-top-colorful-geometric-3d-shapes_2227-1663.jpg'
+                img: 'https://img.freepik.com/free-photo/word-design-written-top-colorful-geometric-3d-shapes_2227-1663.jpg',
+                shape: './overlays/circle.svg'
             }
         },
     ],
