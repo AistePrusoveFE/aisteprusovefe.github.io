@@ -33,30 +33,53 @@ interface DataList {
 
 const data: DataList = {
     aisteLoves: [
-        'loves apples & Peanut Butter',
-        'is actually a Sim - Sul Sul!',
-        'grows her own veggies & fruits',
+        'loves apples & peanut butter',
+        'is actually a Sim - sul sul!',
+        'grows her own 🍅🥬 & 🍏🍓',
         'has 2 meow meows',
-        'absolutely loves nature',
+        'absolutely ❤️ nature',
         'loves cooking',
         'is happy to see you here! ❤️'
     ],
     about: [
         {
             title: 'My Story',
-            info: ['Since teenager years I was into multimedia - nearly ended up as photographer, but..', 'Life happened and turned different direction to - administrator, receptionist or consultant jobs.', 'However I always felt my inner artist knocking and really desired creative work so was trying graphic design as hobby or therapy.', 'In 2020 I finally decided to change my career and stepped in IT industry.', 'Learned programming, practiced design & illustration skills, and here we are  in - page, I fully developed. 😎']
+            info: [
+                'Since teenager years I was into multimedia, but..', 
+                'Life happened and turned different direction to - administrator, receptionist or consultant jobs.', 
+                'However I always felt my inner artist knocking and really desired creative work so was trying graphic design as hobby or therapy.', 
+                'In 2020 I finally decided to change my career and stepped in IT industry.', 
+                'Learned programming, practiced design & illustration skills, and here we are  in - page, I fully developed. 😎'
+            ]
         },
         {
             title: 'Vision & Mission',
-            info: ['I aim to help people or companies in developing their product and ofc share it with the world.', 'Keeping my code as clean, elegant and efficient as possible.', 'My designs are clean but with attention to detail and some perks.', 'Via illustrations I just wanna show, how I see the world.']
+            info: [
+                'I aim to make a product valuable.', 
+                'Keeping my code as clean, elegant and efficient as possible.', 
+                'My designs are simple and playful.', 
+                'My illustrations show the way I see the world'
+            ]
         },
         {
             title: 'Personality',
-            info: ['Foodie', 'Loves Nature & Gardening', 'Empathetic', 'Ambivert', 'Positive']
+            info: [
+                'Empathetic', 
+                'ENFJ-T', 
+                'Positive vibes',
+                'Slightly perfectionist', 
+                'Loves nature & gardening', 
+                'Into dark humor & weird stuff',
+            ]
         },
         {
             title: 'Experience',
-            info: ['CodeAcademy: PHP Consutant/Mentor & Front End Web Development Lecturer 2020 Oct - 2021 Oct', 'Freelance: Web Developer & Web Designer 2021 Oct - Present']
+            info: [
+                'CodeAcademy: PHP Consultant/Mentor 2020 Oct - 2021 Jan',
+                'CodeAcademy: Front End (HTML, CSS, Javascript) Lecturer/Mentor 2021 Jan - 2021 Nov',
+                'Freelance: Web Development & Web Design 2021 Nov - Present',
+                'Freelance: Digital Illustrations 2022 May - Present'
+            ]
         },
     ],
     skills: [

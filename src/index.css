@@ -20,26 +20,11 @@
 @tailwind utilities;
 
 @layer components {
-/*
-    .fenwick-outline {
-        font-family: fenwick-outline, sans-serif;
-    }
-*/
     .apolline {
         font-family: apolline, serif;
-        font-family: 'Syne Mono', monospace;
-    }
-
-    .luckiest {
-        font-family: 'Luckiest Guy', cursive;
     }
 
     .chonk {
-        font-family: 'Rubik Moonrocks', cursive;
-        font-family: 'Sigmar One', cursive;
-        font-family: 'Audiowide', cursive;
-        font-family: 'Black Ops One', cursive;
-        font-family: 'Bungee', cursive;
         font-family: 'Rubik Glitch', cursive;
     }
 
@@ -51,10 +36,6 @@
     }
 
     * {
-    /*
-        font-family: 'Nova Mono', monospace;
-        font-family: interstate, serif; */
-        font-family: 'Syne Mono', monospace;
-        font-family: 'PT Sans', sans-serif;
+        font-family: interstate, sans-serif;
     }
 }

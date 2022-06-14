@@ -42,14 +42,14 @@ const Projects = () => {
                     return <img key={i} src={skill} alt="badge of skill" className="rounded-md" />
                 })}
             </div>
-            <div className="flex justify-around md:justify-center md:gap-x-4">
+            <div className="flex justify-center gap-x-2">
                 {categoryItems.map((catItem: CategoryType, i: number) => {
                     return (
                         <TagBtn active={activeTags.includes(catItem)} catItem={catItem} onActivate={onActivate} onDeactivate={onDeactivate} key={i} />
                     )
                 })}
             </div>
-            <div id="works" className="mt-8 grid gap-2 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-4 lg:gap-8">
+            <div id="works" className="mt-8 grid gap-2 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-4">
                 {filteredProjects.map((project, index) => {
                     return <SingleProject key={index} {...project} />
                 })}

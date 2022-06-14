@@ -7,7 +7,7 @@ import SingleNavlink from "./SingleNavlink"
 const AllLinks = ({ onClick, className }: CloseMenu) => {
 
     const openUrl = () => {
-        window.open('https://www.instagram.com/awesome_perky_techie.diaries/', '_blank')
+        window.open('https://www.instagram.com/awesome_perky_illustrations/', '_blank')
     }
 
     return (

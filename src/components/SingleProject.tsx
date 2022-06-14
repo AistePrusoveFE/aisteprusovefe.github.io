@@ -19,10 +19,13 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     return (
         <GridCol className="h-72 relative">
             <img src={img} alt="webpage preview" className="h-full w-full object-cover rounded-md" />
-            <div className="bg-white h-32 w-32 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center flex flex-col items-center justify-center text-xs uppercase p-2 gap-y-2">
-                <h4 className="font-bold">{title}</h4>
-                <h4 className="">{categoryTitle(category)}</h4>
+            <div className="bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded-full">
+                <div className="h-28 w-28 text-center flex flex-col items-center justify-center text-xs uppercase gap-y-2">
+                    <h4 className="font-extrabold text-pink-900">{title}</h4>
+                    <h4 className="text-zinc-400 font-bold apolline">{categoryTitle(category)}</h4>
+                </div>
             </div>
+
         </GridCol>
 
     )

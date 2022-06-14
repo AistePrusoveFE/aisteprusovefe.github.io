@@ -35,7 +35,7 @@ const SingleFact = ({ title, info, index }: AccordionProps) => {
                 className={`text-zinc-50 border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] flex items-center cursor-pointer py-2 lg:py-6`}
             >
                 <BtnIcon icon={expanded ? <RiArrowUpSFill /> : <RiArrowDownSFill />} />
-                <h4 className="font-bold apolline lg:text-lg">{title}</h4>
+                <h4 className="font-bold   lg:text-lg">{title}</h4>
             </motion.div>
             <AnimatePresence initial={false}>
                 {isOpen && (
