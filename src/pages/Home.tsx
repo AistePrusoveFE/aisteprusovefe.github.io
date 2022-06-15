@@ -1,17 +1,26 @@
 import { motion } from "framer-motion"
 import About from "../components/About"
+import Blog from "../components/Blog"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
 import Projects from "../components/Projects"
+import BtnIcon from "../ui/BtnIcon"
+import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 
 const Home = () => {
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
     return (
-        <> 
-            <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">  
-            <div className="w-full bg-zinc-900">
-                <Navbar />
-            </div>
+        <>
+            <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">
+                <div className="w-full bg-zinc-900">
+                    <Navbar />
+                </div>
                 <motion.div
                     className="bg-red-50 dark:bg-zinc-900 transition-colors text-zinc-700"
                     initial={{ opacity: 0 }}
@@ -23,13 +32,16 @@ const Home = () => {
                         <Hero />
                         <About />
                         <Projects />
-                        {/* <Blog /> */}
+                        <Blog />
+                        <div className="text-center">
+                            <BtnIcon onClick={goToTop} icon={<BsFillArrowUpCircleFill />} className="text-2xl" />
+                        </div>
                         <Footer />
                     </div>
                 </motion.div>
             </div>
         </>
-        
+
     )
 }
 

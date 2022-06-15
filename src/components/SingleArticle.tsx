@@ -1,12 +1,26 @@
+import { useState } from "react"
 import { SingleArticleProps } from "../content"
-import GridCol from "../ui/Gridcol"
+import Modal from "../ui/Modal"
 
-const SingleArticle = ({ title, content }: SingleArticleProps) => {
+const SingleArticle = ({ content }: SingleArticleProps) => {
+    const [isOpen, setIsOpen] = useState(false)
+    const { heading, subheading, photo, description, alt } = content
+
     return (
-        <GridCol size="h-40">
-            <h4>{title}</h4>
-            <p>{content}</p>
-        </GridCol>
+        <div className="p-2 border-2 border-l-8 border-black cursor-pointer mb-8 bg-red-100">
+            <div onClick={() => setIsOpen(true)}>
+                <h4 className="font-bold">{heading}</h4>
+                <p>{subheading}</p>
+            </div>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+                <div>
+                    <h4>{heading}</h4>
+                    <img src={photo} alt={alt} />
+                    <p>{description}</p>
+                </div>
+
+            </Modal>
+        </div>
     )
 }
 

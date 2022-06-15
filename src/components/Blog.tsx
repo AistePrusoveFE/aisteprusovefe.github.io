@@ -8,11 +8,12 @@ const Blog = () => {
     const articles = data.articles
     return (
         <Wrapper>
-            <SectionTitle text="Recent Articles" />
-            <SectionSubtitle text="If you feel like reading.. "/> 
-            <div id="blog" className="grid gap-y-4 md:grid-cols-2 md:gap-x-4">
+            <SectionTitle text="Latest Activity" />
+            <SectionSubtitle text="Behind the scenes of coding, design, branding and illustrating, tips &amp; tricks, my thoughts and etc. "/>
+            <SectionSubtitle text="Enjoy reading!"  />
+            <div id="blog" className="mt-8">
                 {articles.map((article, index) => {
-                    return <SingleArticle key={index} title={article.title} content={article.content} />
+                    return <SingleArticle key={index} {...article}/>
                 })}
             </div>
         </Wrapper>

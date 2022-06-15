@@ -6,21 +6,28 @@ export interface SingleFactProps {
 export interface SingleProjectProps {
     category: CategoryType,
     title: string,
-    content: ContentProps
+    content: ProjectsContentProps
 }
 
 export type CategoryType = 'web' | 'art' | 'branding'
 
-interface ContentProps {
+interface ProjectsContentProps {
     url: string,
     subtitle: string,
     img: string
     shape: string
 }
 
+interface ArticleContent {
+    heading: string
+    subheading: string
+    photo?: string
+    alt?: string
+    description: string
+}
+
 export interface SingleArticleProps {
-    title: string,
-    content: string
+    content: ArticleContent
 }
 
 
@@ -184,20 +191,40 @@ const data: DataList = {
     ],
     articles: [
         {
-            title: "Career Change Story",
-            content: ""
+            content: {
+                heading: 'Career Change Story',
+                subheading: '',
+                photo: '',
+                alt: '',
+                description:''
+            }
         },
         {
-            title: "Apps I Like",
-            content: ""
+            content: {
+                heading: 'Apps I Like',
+                subheading: '',
+                photo: '',
+                alt: '',
+                description:''
+            }
         },
         {
-            title: "How I stay sane",
-            content: ""
+            content: {
+                heading: 'How I stay kinda sane',
+                subheading: '',
+                photo: '',
+                alt: '',
+                description:''
+            }
         },
         {
-            title: "New Illustration alert",
-            content: ""
+            content: {
+                heading: 'Behind the scenes of illustrating',
+                subheading: '',
+                photo: '',
+                alt: '',
+                description:''
+            }
         },
     ]
 }

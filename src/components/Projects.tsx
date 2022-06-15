@@ -34,7 +34,7 @@ const Projects = () => {
     // })
 
     return (
-        <Wrapper className="px-4 min-h-screen">
+        <Wrapper className="px-4">
             <SectionTitle text="My Projects are created with:" />
             <div className="flex flex-wrap gap-2 justify-center mb-12">
                 {data.skills.map((skill, i) => {
