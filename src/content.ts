@@ -24,6 +24,7 @@ interface ArticleContent {
     photo?: string
     alt?: string
     description: string
+    url?: string
 }
 
 export interface SingleArticleProps {
@@ -188,6 +189,16 @@ const data: DataList = {
                 shape: './overlays/circle.svg'
             }
         },
+        {
+            category: 'web',
+            title: 'Landing Page',
+            content: {
+                url: 'https://landing-ihavebox.d32c.lt/',
+                subtitle: 'Static page to show off works',
+                img: 'https://landing-ihavebox.d32c.lt/static/media/hero.e8878a5487f1b4b94d6f.png',
+                shape: './overlays/circle.svg'
+            }
+        },
     ],
     articles: [
         {
@@ -196,7 +207,8 @@ const data: DataList = {
                 subheading: '',
                 photo: '',
                 alt: '',
-                description:''
+                description:'',
+                url: 'https://astonishing-belief-4c4.notion.site/1st-Article-9eb78bc146da49a5892c34638f47c146'
             }
         },
         {
@@ -205,7 +217,8 @@ const data: DataList = {
                 subheading: '',
                 photo: '',
                 alt: '',
-                description:''
+                description:'',
+                url: 'https://awesome-perky-tech-articles.super.site/illustration-ideas'
             }
         },
         {
