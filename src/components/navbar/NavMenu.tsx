@@ -18,19 +18,23 @@ const NavMenu = () => {
     }
 
     return (
-        <div className={`${showMenu ?? 'fixed top-6 right-6'}`}>
-            <BtnIcon className={isMedium ? 'hidden' : 'relative z-20 text-3xl text-pink-300'} onClick={showMenuHandler} icon={showMenu ? <RiCloseFill /> : <RiMenu5Fill />} />
+        <>
             {!isMedium && (
-                <motion.div
-                    initial={{ y: !showMenu ? "-150%" : 0 }}
-                    animate={{ y: showMenu ? 0 : "-150%" }}
-                    transition={{ duration: 0.3 }}
-                    className={`${isMedium ? 'hidden' : 'fixed inset-0 backdrop-blur-sm z-10'}`}>
-                    <Menu onClick={closeMenuHandler} />
-                </motion.div>
+                <div className={`${showMenu ?? 'fixed top-6 right-6'}`}>
+                    <BtnIcon className='relative z-20 text-3xl text-pink-300' onClick={showMenuHandler} icon={showMenu ? <RiCloseFill /> : <RiMenu5Fill />} />
+                    <motion.div
+                        initial={{ y: !showMenu ? "-150%" : 0 }}
+                        animate={{ y: showMenu ? 0 : "-150%" }}
+                        transition={{ duration: 0.3 }}
+                        className='fixed inset-0 backdrop-blur-sm z-10'>
+                        <Menu isMedium={isMedium} onClick={closeMenuHandler} />
+                    </motion.div>
+                </div>
             )}
-            {isMedium && <Menu onClick={closeMenuHandler} />}
-        </div>
+
+            {isMedium && <Menu isMedium={isMedium} onClick={closeMenuHandler} />}
+        </>
+
     )
 }
 

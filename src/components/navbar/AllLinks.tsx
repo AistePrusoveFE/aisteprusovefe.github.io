@@ -1,9 +1,12 @@
-
 import ToggleTheme from "../../ui/ToggleTheme"
-import { CloseMenu } from "./Menu"
 import SingleNavlink from "./SingleNavlink"
 
-const AllLinks = ({ onClick, className }: CloseMenu) => {
+interface AllLinksProps {
+    onClick: () => void
+    className?: string
+}
+
+const AllLinks = ({ onClick, className }: AllLinksProps) => {
 
     return (
         <div className={`${className ?? ''}`}>

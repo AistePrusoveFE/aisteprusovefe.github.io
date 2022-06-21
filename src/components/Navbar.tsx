@@ -1,7 +1,6 @@
 import NavMenu from "./navbar/NavMenu"
 
 const Navbar = () => {
-    // const {theme, setTheme} = useContext(ThemeContext)
 
     return (
         <div className="py-2 mx-auto md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl">
