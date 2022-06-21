@@ -17,7 +17,7 @@ const Home = () => {
     };
     return (
         <>
-            <div className="bg-gradient-to-r from-pink-200 to-pink-400 min-h-screen p-2">
+            <div className="bg-gradient-to-r from-pink-400 to-pink-800 min-h-screen p-2">
                 <div className="w-full bg-zinc-900">
                     <Navbar />
                 </div>
