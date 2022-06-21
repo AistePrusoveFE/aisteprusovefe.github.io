@@ -24,7 +24,7 @@ interface ArticleContent {
     photo?: string
     alt?: string
     description: string
-    url?: string
+    url: string
 }
 
 export interface SingleArticleProps {
@@ -55,30 +55,30 @@ const data: DataList = {
         {
             title: 'My Story',
             info: [
-                'Since teenager years I was into multimedia, but life happened..', 
-                '..and turned me into different direction - administrative or consultant jobs.', 
-                'However, my inner artist was knocking and desired creative work, hence digital illustrations came into my life as a therapy/hobby.', 
-                'In 2020 I finally decided to change my career and actually stepped in IT industry as I enrolled into Full Stack Developer program in CodeAcademy coding school.', 
+                'Since teenager years I was into multimedia, but life happened..',
+                '..and turned me into different direction - administrative or consultant jobs.',
+                'However, my inner artist was knocking and desired creative work, hence digital illustrations came into my life as a therapy/hobby.',
+                'In 2020 I finally decided to change my career and actually stepped in IT industry as I enrolled into Full Stack Developer program in CodeAcademy coding school.',
                 'Learned programming, practiced design & illustration skills, and here we are in a page, I fully developed. 😎'
             ]
         },
         {
             title: 'Vision & Mission',
             info: [
-                'I aim to make a product valuable.', 
-                'Keeping my code as clean, elegant and efficient as possible.', 
-                'My designs are simple and playful.', 
+                'I aim to make a product valuable.',
+                'Keeping my code as clean, elegant and efficient as possible.',
+                'My designs are simple and playful.',
                 'My illustrations show the way I see the world'
             ]
         },
         {
             title: 'Personality',
             info: [
-                'ENFJ-T', 
+                'ENFJ-T',
                 'Empathetic',
                 'Positive vibes',
-                'Slightly perfectionist', 
-                'Loves nature & gardening', 
+                'Slightly perfectionist',
+                'Loves nature & gardening',
                 'Marvel',
                 'Into dark humor & weird stuff',
             ]
@@ -207,8 +207,8 @@ const data: DataList = {
                 subheading: '',
                 photo: '',
                 alt: '',
-                description:'',
-                url: 'https://astonishing-belief-4c4.notion.site/1st-Article-9eb78bc146da49a5892c34638f47c146'
+                description: '',
+                url: 'https://awesome-perky-tech-articles.super.site/1st-article'
             }
         },
         {
@@ -217,7 +217,7 @@ const data: DataList = {
                 subheading: '',
                 photo: '',
                 alt: '',
-                description:'',
+                description: '',
                 url: 'https://awesome-perky-tech-articles.super.site/illustration-ideas'
             }
         },
@@ -227,7 +227,8 @@ const data: DataList = {
                 subheading: '',
                 photo: '',
                 alt: '',
-                description:''
+                description: '',
+                url: 'https://awesome-perky-tech-articles.super.site/resume'
             }
         },
         {
@@ -236,7 +237,8 @@ const data: DataList = {
                 subheading: '',
                 photo: '',
                 alt: '',
-                description:''
+                description: '',
+                url: 'https://awesome-perky-tech-articles.super.site/illustration-ideas'
             }
         },
     ]
