@@ -12,7 +12,7 @@ export interface SingleProjectProps {
 export type CategoryType = 'web' | 'art' | 'branding'
 
 interface ProjectsContentProps {
-    url: string,
+    url?: string,
     subtitle: string,
     img: string
     shape: string
@@ -131,11 +131,10 @@ const data: DataList = {
         },
         {
             category: 'art',
-            title: 'Illustrations Gallery',
+            title: 'Illustration',
             content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: 'https://design4users.com/wp-content/uploads/2021/03/digital-art-andrey-prokopenko-illustration.png.pagespeed.ce.U3_BJ-DAzE.png',
+                subtitle: 'Makeup',
+                img: './art/egle-makeup.png',
                 shape: './overlays/hexagon.svg'
             }
         },
@@ -167,6 +166,24 @@ const data: DataList = {
                 subtitle: 'Static page to show off works',
                 img: 'https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000',
                 shape: './overlays/circle.svg'
+            }
+        },
+        {
+            category: 'art',
+            title: 'Illustration',
+            content: {
+                subtitle: 'Space Husband',
+                img: './art/aurimas-space.png',
+                shape: './overlays/hexagon.svg'
+            }
+        }, 
+        {
+            category: 'art',
+            title: 'Illustration',
+            content: {
+                subtitle: 'Maudymke',
+                img: './art/maudymke.png',
+                shape: './overlays/hexagon.svg'
             }
         },
         {

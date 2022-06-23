@@ -23,8 +23,8 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     }
 
     return (
-        <GridCol className="bg-white">
-            <div className="h-72 relative" onClick={() => setIsOpen(true)}>
+        <GridCol className="bg-white border border-red-400">
+            <div className="h-72 relative border border-blue-900" onClick={() => setIsOpen(true)}>
                 <img src={img} alt="webpage preview" className="h-full w-full object-cover rounded-md" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-40 h-40">
                     <img src={shape} alt="" />
@@ -36,12 +36,11 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
             </div>
             <Modal open={isOpen} onClose={() => setIsOpen(false)}>
                 <div>
-                    <button onClick={() => openUrl(url)} className="py-2 px-4 border border-pink-300 rounded-md mb-4">visit link</button>
-                    <iframe title={title} src={url} width="400" height="300"></iframe>
+                    {url && <button onClick={() => openUrl(url)} className="py-2 px-4 border border-pink-300 rounded-md mb-4">visit link</button>}
+                    <iframe title={title} src={!url ? img : url} className="w-full"></iframe>
                 </div>
             </Modal>
         </GridCol>
-
     )
 }
 
