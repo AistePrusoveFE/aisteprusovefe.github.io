@@ -9,7 +9,7 @@ export interface SingleProjectProps {
     content: ProjectsContentProps
 }
 
-export type CategoryType = 'web' | 'art' 
+export type CategoryType = 'web' | 'art' | 'branding'
 
 interface ProjectsContentProps {
     url?: string,
@@ -136,6 +136,16 @@ const data: DataList = {
                 subtitle: 'Makeup',
                 img: './art-preview/makeup.svg',
                 shape: './overlays/hexagon.svg'
+            }
+        },
+        {
+            category: 'branding',
+            title: 'Meal Planner',
+            content: {
+                url: 'https://jade-fudge-91c3a3.netlify.app/',
+                subtitle: 'Static page to show off works',
+                img: 'https://andystalman.com/as/wp-content/uploads/Branding.jpg',
+                shape: './overlays/hexa.svg'
             }
         },
         {

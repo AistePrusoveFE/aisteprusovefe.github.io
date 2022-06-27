@@ -11,8 +11,10 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     const categoryTitle = (category: string) => {
         if (category === 'art') {
             return 'digital art'
-        } else {
+        } else if (category === 'web') {
             return 'web & design'
+        } else {
+            return category
         }
     }
 
