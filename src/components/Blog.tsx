@@ -7,7 +7,7 @@ import SingleArticle from "./SingleArticle";
 const Blog = () => {
     const articles = data.articles
     return (
-        <Wrapper>
+        <Wrapper className="px-4">
             <SectionTitle text="Latest Activity" />
             <SectionSubtitle text="Behind the scenes of coding, design, branding and illustrating, tips &amp; tricks, my thoughts and etc. "/>
             <SectionSubtitle text="Enjoy reading!"  />

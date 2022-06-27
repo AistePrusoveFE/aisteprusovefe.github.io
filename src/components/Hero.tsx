@@ -17,13 +17,13 @@ const Hero = () => {
         })
     }
 
-    const textChecker = (text: string) => {
-        if (text.includes('loves')) {
-            return text.replace('loves', '❤️')
-        }
+    // const textChecker = (text: string) => {
+    //     if (text.includes('loves')) {
+    //         return text.replace('loves', '❤️')
+    //     }
 
-        return text
-    }
+    //     return text
+    // }
 
     return (
         <Wrapper>
@@ -33,7 +33,8 @@ const Hero = () => {
                 </div>
                 <p className="col-start-1 col-span-4 row-start-1 row-span-2 text-center self-end lg:text-left text-6xl mb-4 sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl lg:mb-10 dark:text-zinc-100 chonk text-zinc-900 break-words">Aiste Prusove</p>
                 <p className="col-start-1 col-span-4 text-center lg:text-left text-2xl md:text-3xl self-start xl:text-5xl dark:text-zinc-100   text-zinc-900">
-                    {textChecker(aisteLoves[index])}
+                    {/* {textChecker(aisteLoves[index])} */}
+                    {aisteLoves[index]}
                 </p>
             </div>
             <motion.div className="block w-fit mx-auto lg:mx-0 mt-6"

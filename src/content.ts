@@ -9,7 +9,7 @@ export interface SingleProjectProps {
     content: ProjectsContentProps
 }
 
-export type CategoryType = 'web' | 'art' | 'branding'
+export type CategoryType = 'web' | 'art' 
 
 interface ProjectsContentProps {
     url?: string,
@@ -46,8 +46,8 @@ const data: DataList = {
         'is actually a Sim - sul sul!',
         'grows her own 🍅🥬 & 🍏🍓',
         'has 2 meow meows 🙀😼🐈',
-        'absolutely ❤️ nature 🌳',
-        'loves cooking',
+        'absolutely ❤️\'s nature 🌳',
+        '❤️\'s cooking',
         'thinks summer is the best 😎☀️',
         'is happy to see you here! ❤️'
     ],
@@ -134,18 +134,8 @@ const data: DataList = {
             title: 'Illustration',
             content: {
                 subtitle: 'Makeup',
-                img: './art/egle-makeup.png',
+                img: './art-preview/makeup.svg',
                 shape: './overlays/hexagon.svg'
-            }
-        },
-        {
-            category: 'branding',
-            title: 'Meal Planner',
-            content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
-                subtitle: 'Static page to show off works',
-                img: 'https://andystalman.com/as/wp-content/uploads/Branding.jpg',
-                shape: './overlays/hexa.svg'
             }
         },
         {
@@ -158,6 +148,15 @@ const data: DataList = {
                 shape: './overlays/circle.svg'
             }
         },
+        {
+            category: 'art',
+            title: 'Illustration',
+            content: {
+                subtitle: 'Space Husband',
+                img: './art-preview/egle-makeup.svg',
+                shape: './overlays/hexagon.svg'
+            }
+        }, 
         {
             category: 'web',
             title: 'Mood Tracker',
@@ -172,17 +171,8 @@ const data: DataList = {
             category: 'art',
             title: 'Illustration',
             content: {
-                subtitle: 'Space Husband',
-                img: './art/aurimas-space.png',
-                shape: './overlays/hexagon.svg'
-            }
-        }, 
-        {
-            category: 'art',
-            title: 'Illustration',
-            content: {
                 subtitle: 'Maudymke',
-                img: './art/maudymke.png',
+                img: './art-preview/swimwear.svg',
                 shape: './overlays/hexagon.svg'
             }
         },
@@ -190,9 +180,8 @@ const data: DataList = {
             category: 'art',
             title: 'Pizza Quizz',
             content: {
-                url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
-                img: 'https://i.pinimg.com/originals/d3/02/e4/d302e4d06d9afae957b686985215270a.jpg',
+                img: './art-preview/pinup.svg',
                 shape: './overlays/hexagon.svg'
             }
         },
@@ -204,6 +193,15 @@ const data: DataList = {
                 subtitle: 'Static page to show off works',
                 img: 'https://img.freepik.com/free-photo/word-design-written-top-colorful-geometric-3d-shapes_2227-1663.jpg',
                 shape: './overlays/circle.svg'
+            }
+        },
+        {
+            category: 'art',
+            title: 'Pizza Quizz',
+            content: {
+                subtitle: 'Static page to show off works',
+                img: './art-preview/space-hubby.svg',
+                shape: './overlays/hexagon.svg'
             }
         },
         {

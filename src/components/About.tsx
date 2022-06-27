@@ -10,6 +10,7 @@ const About = () => {
             <div id="about">
                 <SectionSubtitle text="a girl with a passion for" />
                 <SectionTitle text="&lt;code&gt; &amp;&amp; &#10000;design&#9998; " />
+                <p>Show short, medium or long biography</p>
                 <Accordion />
             </div>
         </Wrapper>

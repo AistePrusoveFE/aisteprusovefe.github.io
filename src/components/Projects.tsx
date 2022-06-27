@@ -49,7 +49,7 @@ const Projects = () => {
                     )
                 })}
             </div>
-            <div id="works" className="mt-8 grid gap-2 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-4">
+            <div id="works" className="mt-8 grid gap-4 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-4">
                 {filteredProjects.map((project, index) => {
                     return <SingleProject key={index} {...project} />
                 })}
