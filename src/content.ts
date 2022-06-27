@@ -12,6 +12,7 @@ export interface SingleProjectProps {
 export type CategoryType = 'web' | 'art' | 'branding'
 
 interface ProjectsContentProps {
+    preview?: string
     url?: string,
     subtitle: string,
     img: string
@@ -123,6 +124,7 @@ const data: DataList = {
             category: 'web',
             title: 'Creta Nails and Beauty',
             content: {
+                preview: './web-preview/creta-nails.png',
                 url: 'https://jade-fudge-91c3a3.netlify.app/',
                 subtitle: 'Static page to show off works',
                 img: 'https://www.sigmawebsolutions.com/wp-content/uploads/2020/05/AdobeStock_256229414.jpg',
@@ -218,6 +220,7 @@ const data: DataList = {
             category: 'web',
             title: 'Landing Page',
             content: {
+                preview: './web-preview/landing-d32c.png',
                 url: 'https://landing-ihavebox.d32c.lt/',
                 subtitle: 'Static page to show off works',
                 img: 'https://landing-ihavebox.d32c.lt/static/media/hero.e8878a5487f1b4b94d6f.png',

@@ -6,7 +6,7 @@ import Modal from "../ui/Modal"
 
 const SingleProject = ({ title, content, category }: SingleProjectProps) => {
     const [isOpen, setIsOpen] = useState(false)
-    const { url, img, shape } = content
+    const { url, img, shape, preview } = content
 
     const categoryTitle = (category: string) => {
         if (category === 'art') {
@@ -35,15 +35,21 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
                 </div>
             </div>
             <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                <div className="overflow-y-scroll">
-                    {url && <button onClick={() => openUrl(url)} className="py-2 px-4 border border-pink-300 rounded-md mb-4">visit link</button>}
-                    {!url ? (
-                        <img src={img} alt={title} className="w-full " />
-                    ) : (
-                        <iframe title={title} src={url} className="w-full" />
-                    )}
+                {url ? (
+                    <button onClick={() => openUrl(url)} className="py-2 px-4 border border-pink-300 rounded-md mb-4 w-40">visit link</button>
+                ) : <></>}
 
+                <div className="overflow-y-scroll">
+                    {!url ? (
+                        <img src={img} alt={title} className="max-h-fit" />
+                    ) : (
+                        <img src={preview} />
+                        // <iframe title={title} src={url} className="w-full h-full" />
+                    )}
                 </div>
+
+
+
             </Modal>
         </GridCol>
     )
