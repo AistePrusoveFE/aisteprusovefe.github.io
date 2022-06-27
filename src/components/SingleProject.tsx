@@ -40,12 +40,13 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
                 ) : <></>}
 
                 <div className="overflow-y-scroll">
-                    {!url ? (
+                    <img src={!url ? img : preview } alt={title} />
+                    {/* {!url ? (
                         <img src={img} alt={title} className="max-h-fit" />
                     ) : (
                         <img src={preview} />
                         // <iframe title={title} src={url} className="w-full h-full" />
-                    )}
+                    )} */}
                 </div>
 
 
