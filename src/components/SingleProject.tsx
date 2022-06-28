@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { SingleProjectProps } from "../content"
 import GridCol from "../ui/Gridcol"
 import Modal from "../ui/Modal"
@@ -22,6 +22,14 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
         window.open(url, '_blank')
     }
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
+        }
+    }, [isOpen])
+
     return (
         <GridCol className="bg-white">
             <div className="h-64 relative" onClick={() => setIsOpen(true)}>
@@ -40,7 +48,7 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
                 ) : <></>}
 
                 <div className="overflow-y-scroll">
-                    <img src={!url ? img : preview } alt={title} />
+                    <img src={!url ? img : preview} alt={title} />
                     {/* {!url ? (
                         <img src={img} alt={title} className="max-h-fit" />
                     ) : (

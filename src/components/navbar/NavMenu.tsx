@@ -1,5 +1,5 @@
 import { RiMenu5Fill, RiCloseFill } from "react-icons/ri"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import useMediaQuery from "../../hooks/useMediaQuery"
 import { motion } from "framer-motion"
 import Menu from "./Menu"
@@ -16,6 +16,14 @@ const NavMenu = () => {
     const closeMenuHandler = () => {
         setShowMenu(false)
     }
+
+    useEffect(() => {
+        if (showMenu) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
+        }
+    }, [showMenu])
 
     return (
         <>
