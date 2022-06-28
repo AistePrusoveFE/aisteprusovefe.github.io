@@ -35,7 +35,7 @@ const SingleFact = ({ title, info, index }: AccordionProps) => {
                 className={`text-zinc-50 border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] flex items-center cursor-pointer py-2 lg:py-6`}
             >
                 <BtnIcon icon={expanded ? <RiArrowUpSFill /> : <RiArrowDownSFill />} />
-                <h4 className="font-bold   lg:text-lg">{title}</h4>
+                <h4 className="font-bold lg:text-lg">{title}</h4>
             </motion.div>
             <AnimatePresence initial={false}>
                 {isOpen && (
@@ -52,7 +52,7 @@ const SingleFact = ({ title, info, index }: AccordionProps) => {
                             duration: 0.8,
                             ease: [0.04, 0.62, 0.23, 0.98]
                         }}
-                        className={`dark:bg-zinc-900 pl-8 text-justify border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] dark:text-zinc-200`}>
+                        className={`dark:bg-zinc-900 pl-8 pr-4 text-justify border-l-4 border-l-[#FF0088] dark:border-l-[#FF0088] dark:text-zinc-200`}>
                         <motion.div
                             variants={{
                                 collapsed: { scale: 0.9 },

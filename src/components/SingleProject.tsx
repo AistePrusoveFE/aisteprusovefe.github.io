@@ -43,22 +43,12 @@ const SingleProject = ({ title, content, category }: SingleProjectProps) => {
                 </div>
             </div>
             <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                {url ? (
-                    <button onClick={() => openUrl(url)} className="py-2 px-4 border border-pink-300 rounded-md mb-4 w-40">visit link</button>
-                ) : <></>}
-
-                <div className="overflow-y-scroll">
-                    <img src={!url ? img : preview} alt={title} />
-                    {/* {!url ? (
-                        <img src={img} alt={title} className="max-h-fit" />
-                    ) : (
-                        <img src={preview} />
-                        // <iframe title={title} src={url} className="w-full h-full" />
-                    )} */}
+                <div className="overflow-y-scroll shadow-md p-4 rounded-lg">
+                    <img src={!url ? img : preview} alt={title}/>
                 </div>
-
-
-
+                {url ? (
+                    <button onClick={() => openUrl(url)} className="mx-auto py-2 px-4 bg-pink-400 rounded-lg text-white mb-4 w-full shadow-md hover:shadow-xl hover:bg-pink-600 sm:w-60">view full page</button>
+                ) : <></>}
             </Modal>
         </GridCol>
     )
